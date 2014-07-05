@@ -1,0 +1,101 @@
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+</head>
+
+<body background="images/paper_fibers.png">
+	<div id='cssmenu'>
+		<ul>
+			<li class='active'><a href='#'><span>About</span></a></li>
+			<li><a href='#'><span>Resume</span></a></li>
+			<li><a href='#'><span>Blog</span></a></li>
+			<li><a href='#'><span>Interests</span></a></li>
+			<li><a href='#'><span>Projects</span></a></li>
+			<li><a href='#'><span>Blueprint</span></a></li>
+			<li class='last'><a href='#'><span>Contact</span></a></li>
+		</ul>
+	</div>
+	<div class="bs-header" id="content"> 
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5">
+					<img class="profile-pic" src="images/me.png">
+				</div>
+				<div class="col-md-7 sub">
+					<h1 style="font-size: 90px;">Vincent Tian</h1>
+					<p>
+						<a href="#">Student</a>, 
+						<a href="#">Software Engineer</a>, 
+						<a href="#">Investor</a>, 
+						<a href="#">Life Enthusiast</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="introduction center"> 
+		Hi there! My name is Vincent Tian, and I am a rising 3rd year Computer Science student at UC Berkeley.
+	</div>
+	<footer class="bs-footer" role="contentinfo">
+		<p class="copyright">© 2014 Vincent Tian</p>
+		<div class="table">
+			<ul id="horizontal-list">
+				<li><a href="http://github.com/vincenttian">Github</a></li>
+				<li class="muted">·</li>
+				<li><a href="#">LinkedIn</a></li>
+				<li class="muted">·</li>
+				<li><a href="#">Quora</a></li>
+				<li class="muted">·</li>
+				<li><a href="#">Twitter</a></li>
+				<li class="muted">·</li>
+				<li><a href="#">Facebook</a></li>
+				<li class="muted">·</li>
+				<li><a href="#">Google+</a></li>
+			</ul>
+		</div>
+	</footer>
+</body>
+<script>
+	$(document).ready(function() {
+		var firstScroll = false;
+
+		function toggleNavigation(navigationState) {
+			var width;
+			$(".general-navigation-item").each(function(index) {
+				if (navigationState === true) {
+					width = -$(this).width() - $("#logo").width();
+				} else {
+					width = 0;
+					if (index === 0) {
+						width = $("#logo").width();
+					}
+				}
+				$("#logo").toggleClass("open");
+				$(this).css("margin-left", width);
+			});
+		}
+		$("#logo").click(function(evt) {
+			var navState = $("#logo").attr("class");
+			if (navState === "open") {
+				toggleNavigation(true);
+			} else {
+				toggleNavigation(false);
+			}
+		});
+		$(window).scroll(function() {
+			var scrollHeight = $(document).scrollTop();
+			if (scrollHeight === 0) {
+				toggleNavigation(false);
+				firstScroll = false;
+			} else {
+				if (firstScroll === false) {
+					toggleNavigation(true);
+					firstScroll = true;
+				}
+			}
+		});
+	});
+</script>

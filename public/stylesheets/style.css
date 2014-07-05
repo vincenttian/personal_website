@@ -1,0 +1,952 @@
+/* Styles for www.elizabethylin.com */
+
+/* Font styles */
+ @font-face {
+    font-family:'Alegreya Sans';
+    font-style: normal;
+    font-weight: 100;
+    src: local("Alegreya Sans Thin"), local("AlegreyaSans-Thin"), url(http://themes.googleusercontent.com/static/fonts/alegreyasans/v1/TKyx_-JJ6MdpQruNk-t-PMirbh6OUF7J5FHbYIz0tTY.woff) format("woff");
+}
+@font-face {
+    font-family:'Alegreya Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local("Alegreya Sans"), local("AlegreyaSans-Regular"), url(http://themes.googleusercontent.com/static/fonts/alegreyasans/v1/KYNzioYhDai7mTMnx_gDgnt9r5m2YmP5sw3cUAQwL0E.woff) format("woff");
+}
+@font-face {
+    font-family:'Alegreya Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: local("Alegreya Sans Medium"), local("AlegreyaSans-Medium"), url(http://themes.googleusercontent.com/static/fonts/alegreyasans/v1/11EDm-lum6tskJMBbdy9aRSu2h6M8zeGTOAvuRkzdcM.woff) format("woff");
+}
+@font-face {
+    font-family:'Alegreya Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local("Alegreya Sans Bold"), local("AlegreyaSans-Bold"), url(http://themes.googleusercontent.com/static/fonts/alegreyasans/v1/11EDm-lum6tskJMBbdy9aVV8F1P-UN-fltcX6iMUcbA.woff) format("woff");
+}
+/* Reset.css */
+ html, body, div, span, applet, object, iframe, h1, h2, .headline a, .footer a, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content:'';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* Color Definitions */
+
+/* General */
+ html, body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    background: #e4e1e2;
+    width: 100%;
+    height: 100%;
+}
+#wrapper {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Clearfix */
+ .clearfix, #wrapper, .clearfix:before, .clearfix:after, .modules, .row, .display-images {
+    zoom: 1;
+}
+#wrapper:before, .clearfix:before, .modules:before, .row:before, .display-images:before, #wrapper:after, .clearfix:after, .modules:after, .row:after, .display-images:after {
+    content:"\0020";
+    display: block;
+    height: 0;
+}
+#wrapper:after, .clearfix:after, .modules:after, .row:after, .display-images:after {
+    clear: both;
+}
+/* Navigation */
+ .general-navigation {
+    position: fixed;
+    z-index: 3;
+}
+.general-navigation ul {
+    overflow: hidden;
+}
+.general-navigation li {
+    height: 65px;
+}
+.general-navigation #logo {
+    position: fixed;
+    width: 65px;
+    background: #ee478d url("../images/menu-icon.png");
+    background-size: contain;
+    z-index: 2;
+}
+.general-navigation #logo a {
+    display: block;
+}
+.general-navigation #logo:hover {
+    cursor: pointer;
+}
+.general-navigation .general-navigation-item {
+    float: left;
+    position: relative;
+    background: white;
+    margin-left: 0;
+    -moz-transition: margin-left 0.5s;
+    -webkit-transition: margin-left 0.5s;
+    transition: margin-left 0.5s;
+}
+.general-navigation .general-navigation-item.first {
+    margin-left: 65px;
+}
+.general-navigation .general-navigation-item#home:hover {
+    cursor: default;
+    background: white;
+}
+.general-navigation .general-navigation-item#home:hover a {
+    color: #ee478d;
+    cursor: default;
+}
+.general-navigation .general-navigation-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 22px 40px 0 40px;
+    font: 500 18px/20px"Alegreya Sans", "Helvetica", "Arial", sans-serif;
+    color: #ee478d;
+    text-decoration: none;
+}
+.general-navigation .general-navigation-item.active, .general-navigation .general-navigation-item:hover {
+    cursor: pointer;
+    background: #ee478d;
+}
+.general-navigation .general-navigation-item.active a, .general-navigation .general-navigation-item:hover a {
+    color: white;
+}
+.general-navigation .general-navigation-item.active:hover {
+    cursor: default;
+}
+.general-navigation .general-navigation-item.active:hover a {
+    cursor: default;
+}
+/* Typography */
+ h1, h2, .headline a, .footer a, h3, h4, h5, h6, p, a, li {
+    font-family:"Alegreya Sans", "Helvetica", "Arial", sans-serif;
+    color: white;
+}
+h1 {
+    font-weight: 700;
+    font-size: 45px;
+}
+h2, .headline a, .footer a {
+    font-weight: 500;
+    font-size: 30px;
+}
+h3, h4, h5, h6 {
+    font-weight: 100;
+}
+h3 {
+    font-size: 20px;
+    line-height: 30px;
+}
+h3.skill {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 23px;
+}
+h4 {
+    font-size: 17px;
+    line-height: 20px;
+}
+h5 {
+    font-size: 40px;
+    line-height: 46px;
+}
+h5 a.about-link, h5 em {
+    font-weight: 400;
+}
+h5 a.about-link {
+    display: inline;
+    text-decoration: none;
+    padding: 0;
+}
+h5 a.about-link:hover {
+    text-decoration: underline;
+}
+h6 {
+    font-size: 15px;
+    line-height: 17px;
+    margin-bottom: 10px;
+}
+hr {
+    border: 1px solid white;
+    margin: 15px 0;
+}
+p {
+    font-weight: 100;
+    font-size: 25px;
+    line-height: 32px;
+}
+p strong {
+    font-weight: 400;
+}
+p em {
+    text-decoration: underline;
+}
+/* Search */
+ #search {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 25%;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.9);
+}
+#search input {
+    background: rgba(255, 255, 255, 0);
+    font-family:"Alegreya Sans", "Helvetica", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 70px;
+    color: #42393c;
+    border: none;
+    outline: none;
+}
+#search p {
+    color: #42393c;
+    opacity: 0.3;
+    font-weight: 400;
+    font-size: 30px;
+}
+/* Responsive modules */
+ .row, .module, .xsmall-module, .xsmall-module-tall, .small-module, .small-text-only-module, .small-module-tall, .medium-module, .medium-module-tall, .large-module, .large-text-only-module, .large-module-tall, .xlarge-module, .headline, .footer, .intro-module, .video-module, .xlarge-text-only-module, .page-header, .text-module, .xlarge-module-tall, .group, .xsmall-group, .xsmall-group-tall, .small-group, .small-group-tall, .medium-group, .medium-group-tall, .large-group, .large-group-tall, .xlarge-group, .xlarge-group-tall {
+    float: left;
+}
+.module, .xsmall-module, .xsmall-module-tall, .small-module, .small-text-only-module, .small-module-tall, .medium-module, .medium-module-tall, .large-module, .large-text-only-module, .large-module-tall, .xlarge-module, .headline, .footer, .intro-module, .video-module, .xlarge-text-only-module, .page-header, .text-module, .xlarge-module-tall {
+    position: relative;
+    height: 400px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.module:hover a, .xsmall-module:hover a, .xsmall-module-tall:hover a, .small-module:hover a, .small-text-only-module:hover a, .small-module-tall:hover a, .medium-module:hover a, .medium-module-tall:hover a, .large-module:hover a, .large-text-only-module:hover a, .large-module-tall:hover a, .xlarge-module:hover a, .headline:hover a, .footer:hover a, .intro-module:hover a, .video-module:hover a, .xlarge-text-only-module:hover a, .page-header:hover a, .text-module:hover a, .xlarge-module-tall:hover a {
+    cursor: pointer;
+}
+.module:hover a .module-text, .xsmall-module:hover a .module-text, .xsmall-module-tall:hover a .module-text, .small-module:hover a .module-text, .small-text-only-module:hover a .module-text, .small-module-tall:hover a .module-text, .medium-module:hover a .module-text, .medium-module-tall:hover a .module-text, .large-module:hover a .module-text, .large-text-only-module:hover a .module-text, .large-module-tall:hover a .module-text, .xlarge-module:hover a .module-text, .headline:hover a .module-text, .footer:hover a .module-text, .intro-module:hover a .module-text, .video-module:hover a .module-text, .xlarge-text-only-module:hover a .module-text, .page-header:hover a .module-text, .text-module:hover a .module-text, .xlarge-module-tall:hover a .module-text, .module:hover a .xlarge-module-text, .xsmall-module:hover a .xlarge-module-text, .xsmall-module-tall:hover a .xlarge-module-text, .small-module:hover a .xlarge-module-text, .small-text-only-module:hover a .xlarge-module-text, .small-module-tall:hover a .xlarge-module-text, .medium-module:hover a .xlarge-module-text, .medium-module-tall:hover a .xlarge-module-text, .large-module:hover a .xlarge-module-text, .large-text-only-module:hover a .xlarge-module-text, .large-module-tall:hover a .xlarge-module-text, .xlarge-module:hover a .xlarge-module-text, .headline:hover a .xlarge-module-text, .footer:hover a .xlarge-module-text, .intro-module:hover a .xlarge-module-text, .video-module:hover a .xlarge-module-text, .xlarge-text-only-module:hover a .xlarge-module-text, .page-header:hover a .xlarge-module-text, .text-module:hover a .xlarge-module-text, .xlarge-module-tall:hover a .xlarge-module-text, .module:hover a .large-module-text, .xsmall-module:hover a .large-module-text, .xsmall-module-tall:hover a .large-module-text, .small-module:hover a .large-module-text, .small-text-only-module:hover a .large-module-text, .small-module-tall:hover a .large-module-text, .medium-module:hover a .large-module-text, .medium-module-tall:hover a .large-module-text, .large-module:hover a .large-module-text, .large-text-only-module:hover a .large-module-text, .large-module-tall:hover a .large-module-text, .xlarge-module:hover a .large-module-text, .headline:hover a .large-module-text, .footer:hover a .large-module-text, .intro-module:hover a .large-module-text, .video-module:hover a .large-module-text, .xlarge-text-only-module:hover a .large-module-text, .page-header:hover a .large-module-text, .text-module:hover a .large-module-text, .xlarge-module-tall:hover a .large-module-text, .module:hover a .medium-module-text, .xsmall-module:hover a .medium-module-text, .xsmall-module-tall:hover a .medium-module-text, .small-module:hover a .medium-module-text, .small-text-only-module:hover a .medium-module-text, .small-module-tall:hover a .medium-module-text, .medium-module:hover a .medium-module-text, .medium-module-tall:hover a .medium-module-text, .large-module:hover a .medium-module-text, .large-text-only-module:hover a .medium-module-text, .large-module-tall:hover a .medium-module-text, .xlarge-module:hover a .medium-module-text, .headline:hover a .medium-module-text, .footer:hover a .medium-module-text, .intro-module:hover a .medium-module-text, .video-module:hover a .medium-module-text, .xlarge-text-only-module:hover a .medium-module-text, .page-header:hover a .medium-module-text, .text-module:hover a .medium-module-text, .xlarge-module-tall:hover a .medium-module-text, .module:hover a .small-module-text, .xsmall-module:hover a .small-module-text, .xsmall-module-tall:hover a .small-module-text, .small-module:hover a .small-module-text, .small-text-only-module:hover a .small-module-text, .small-module-tall:hover a .small-module-text, .medium-module:hover a .small-module-text, .medium-module-tall:hover a .small-module-text, .large-module:hover a .small-module-text, .large-text-only-module:hover a .small-module-text, .large-module-tall:hover a .small-module-text, .xlarge-module:hover a .small-module-text, .headline:hover a .small-module-text, .footer:hover a .small-module-text, .intro-module:hover a .small-module-text, .video-module:hover a .small-module-text, .xlarge-text-only-module:hover a .small-module-text, .page-header:hover a .small-module-text, .text-module:hover a .small-module-text, .xlarge-module-tall:hover a .small-module-text {
+    display: block;
+}
+.module:hover a .module-text h2, .xsmall-module:hover a .module-text h2, .xsmall-module-tall:hover a .module-text h2, .small-module:hover a .module-text h2, .small-text-only-module:hover a .module-text h2, .small-module-tall:hover a .module-text h2, .medium-module:hover a .module-text h2, .medium-module-tall:hover a .module-text h2, .large-module:hover a .module-text h2, .large-text-only-module:hover a .module-text h2, .large-module-tall:hover a .module-text h2, .xlarge-module:hover a .module-text h2, .headline:hover a .module-text h2, .footer:hover a .module-text h2, .intro-module:hover a .module-text h2, .video-module:hover a .module-text h2, .xlarge-text-only-module:hover a .module-text h2, .page-header:hover a .module-text h2, .text-module:hover a .module-text h2, .xlarge-module-tall:hover a .module-text h2, .module:hover a .xlarge-module-text h2, .xsmall-module:hover a .xlarge-module-text h2, .xsmall-module-tall:hover a .xlarge-module-text h2, .small-module:hover a .xlarge-module-text h2, .small-text-only-module:hover a .xlarge-module-text h2, .small-module-tall:hover a .xlarge-module-text h2, .medium-module:hover a .xlarge-module-text h2, .medium-module-tall:hover a .xlarge-module-text h2, .large-module:hover a .xlarge-module-text h2, .large-text-only-module:hover a .xlarge-module-text h2, .large-module-tall:hover a .xlarge-module-text h2, .xlarge-module:hover a .xlarge-module-text h2, .headline:hover a .xlarge-module-text h2, .footer:hover a .xlarge-module-text h2, .intro-module:hover a .xlarge-module-text h2, .video-module:hover a .xlarge-module-text h2, .xlarge-text-only-module:hover a .xlarge-module-text h2, .page-header:hover a .xlarge-module-text h2, .text-module:hover a .xlarge-module-text h2, .xlarge-module-tall:hover a .xlarge-module-text h2, .module:hover a .large-module-text h2, .xsmall-module:hover a .large-module-text h2, .xsmall-module-tall:hover a .large-module-text h2, .small-module:hover a .large-module-text h2, .small-text-only-module:hover a .large-module-text h2, .small-module-tall:hover a .large-module-text h2, .medium-module:hover a .large-module-text h2, .medium-module-tall:hover a .large-module-text h2, .large-module:hover a .large-module-text h2, .large-text-only-module:hover a .large-module-text h2, .large-module-tall:hover a .large-module-text h2, .xlarge-module:hover a .large-module-text h2, .headline:hover a .large-module-text h2, .footer:hover a .large-module-text h2, .intro-module:hover a .large-module-text h2, .video-module:hover a .large-module-text h2, .xlarge-text-only-module:hover a .large-module-text h2, .page-header:hover a .large-module-text h2, .text-module:hover a .large-module-text h2, .xlarge-module-tall:hover a .large-module-text h2, .module:hover a .medium-module-text h2, .xsmall-module:hover a .medium-module-text h2, .xsmall-module-tall:hover a .medium-module-text h2, .small-module:hover a .medium-module-text h2, .small-text-only-module:hover a .medium-module-text h2, .small-module-tall:hover a .medium-module-text h2, .medium-module:hover a .medium-module-text h2, .medium-module-tall:hover a .medium-module-text h2, .large-module:hover a .medium-module-text h2, .large-text-only-module:hover a .medium-module-text h2, .large-module-tall:hover a .medium-module-text h2, .xlarge-module:hover a .medium-module-text h2, .headline:hover a .medium-module-text h2, .footer:hover a .medium-module-text h2, .intro-module:hover a .medium-module-text h2, .video-module:hover a .medium-module-text h2, .xlarge-text-only-module:hover a .medium-module-text h2, .page-header:hover a .medium-module-text h2, .text-module:hover a .medium-module-text h2, .xlarge-module-tall:hover a .medium-module-text h2, .module:hover a .small-module-text h2, .xsmall-module:hover a .small-module-text h2, .xsmall-module-tall:hover a .small-module-text h2, .small-module:hover a .small-module-text h2, .small-text-only-module:hover a .small-module-text h2, .small-module-tall:hover a .small-module-text h2, .medium-module:hover a .small-module-text h2, .medium-module-tall:hover a .small-module-text h2, .large-module:hover a .small-module-text h2, .large-text-only-module:hover a .small-module-text h2, .large-module-tall:hover a .small-module-text h2, .xlarge-module:hover a .small-module-text h2, .headline:hover a .small-module-text h2, .footer:hover a .small-module-text h2, .intro-module:hover a .small-module-text h2, .video-module:hover a .small-module-text h2, .xlarge-text-only-module:hover a .small-module-text h2, .page-header:hover a .small-module-text h2, .text-module:hover a .small-module-text h2, .xlarge-module-tall:hover a .small-module-text h2, .module:hover a .module-text .headline a, .headline .module:hover a .module-text a, .xsmall-module:hover a .module-text .headline a, .headline .xsmall-module:hover a .module-text a, .xsmall-module-tall:hover a .module-text .headline a, .headline .xsmall-module-tall:hover a .module-text a, .small-module:hover a .module-text .headline a, .headline .small-module:hover a .module-text a, .small-text-only-module:hover a .module-text .headline a, .headline .small-text-only-module:hover a .module-text a, .small-module-tall:hover a .module-text .headline a, .headline .small-module-tall:hover a .module-text a, .medium-module:hover a .module-text .headline a, .headline .medium-module:hover a .module-text a, .medium-module-tall:hover a .module-text .headline a, .headline .medium-module-tall:hover a .module-text a, .large-module:hover a .module-text .headline a, .headline .large-module:hover a .module-text a, .large-text-only-module:hover a .module-text .headline a, .headline .large-text-only-module:hover a .module-text a, .large-module-tall:hover a .module-text .headline a, .headline .large-module-tall:hover a .module-text a, .xlarge-module:hover a .module-text .headline a, .headline .xlarge-module:hover a .module-text a, .headline:hover a .module-text a, .footer:hover a .module-text .headline a, .headline .footer:hover a .module-text a, .intro-module:hover a .module-text .headline a, .headline .intro-module:hover a .module-text a, .video-module:hover a .module-text .headline a, .headline .video-module:hover a .module-text a, .xlarge-text-only-module:hover a .module-text .headline a, .headline .xlarge-text-only-module:hover a .module-text a, .page-header:hover a .module-text .headline a, .headline .page-header:hover a .module-text a, .text-module:hover a .module-text .headline a, .headline .text-module:hover a .module-text a, .xlarge-module-tall:hover a .module-text .headline a, .headline .xlarge-module-tall:hover a .module-text a, .module:hover a .xlarge-module-text .headline a, .headline .module:hover a .xlarge-module-text a, .xsmall-module:hover a .xlarge-module-text .headline a, .headline .xsmall-module:hover a .xlarge-module-text a, .xsmall-module-tall:hover a .xlarge-module-text .headline a, .headline .xsmall-module-tall:hover a .xlarge-module-text a, .small-module:hover a .xlarge-module-text .headline a, .headline .small-module:hover a .xlarge-module-text a, .small-text-only-module:hover a .xlarge-module-text .headline a, .headline .small-text-only-module:hover a .xlarge-module-text a, .small-module-tall:hover a .xlarge-module-text .headline a, .headline .small-module-tall:hover a .xlarge-module-text a, .medium-module:hover a .xlarge-module-text .headline a, .headline .medium-module:hover a .xlarge-module-text a, .medium-module-tall:hover a .xlarge-module-text .headline a, .headline .medium-module-tall:hover a .xlarge-module-text a, .large-module:hover a .xlarge-module-text .headline a, .headline .large-module:hover a .xlarge-module-text a, .large-text-only-module:hover a .xlarge-module-text .headline a, .headline .large-text-only-module:hover a .xlarge-module-text a, .large-module-tall:hover a .xlarge-module-text .headline a, .headline .large-module-tall:hover a .xlarge-module-text a, .xlarge-module:hover a .xlarge-module-text .headline a, .headline .xlarge-module:hover a .xlarge-module-text a, .headline:hover a .xlarge-module-text a, .footer:hover a .xlarge-module-text .headline a, .headline .footer:hover a .xlarge-module-text a, .intro-module:hover a .xlarge-module-text .headline a, .headline .intro-module:hover a .xlarge-module-text a, .video-module:hover a .xlarge-module-text .headline a, .headline .video-module:hover a .xlarge-module-text a, .xlarge-text-only-module:hover a .xlarge-module-text .headline a, .headline .xlarge-text-only-module:hover a .xlarge-module-text a, .page-header:hover a .xlarge-module-text .headline a, .headline .page-header:hover a .xlarge-module-text a, .text-module:hover a .xlarge-module-text .headline a, .headline .text-module:hover a .xlarge-module-text a, .xlarge-module-tall:hover a .xlarge-module-text .headline a, .headline .xlarge-module-tall:hover a .xlarge-module-text a, .module:hover a .large-module-text .headline a, .headline .module:hover a .large-module-text a, .xsmall-module:hover a .large-module-text .headline a, .headline .xsmall-module:hover a .large-module-text a, .xsmall-module-tall:hover a .large-module-text .headline a, .headline .xsmall-module-tall:hover a .large-module-text a, .small-module:hover a .large-module-text .headline a, .headline .small-module:hover a .large-module-text a, .small-text-only-module:hover a .large-module-text .headline a, .headline .small-text-only-module:hover a .large-module-text a, .small-module-tall:hover a .large-module-text .headline a, .headline .small-module-tall:hover a .large-module-text a, .medium-module:hover a .large-module-text .headline a, .headline .medium-module:hover a .large-module-text a, .medium-module-tall:hover a .large-module-text .headline a, .headline .medium-module-tall:hover a .large-module-text a, .large-module:hover a .large-module-text .headline a, .headline .large-module:hover a .large-module-text a, .large-text-only-module:hover a .large-module-text .headline a, .headline .large-text-only-module:hover a .large-module-text a, .large-module-tall:hover a .large-module-text .headline a, .headline .large-module-tall:hover a .large-module-text a, .xlarge-module:hover a .large-module-text .headline a, .headline .xlarge-module:hover a .large-module-text a, .headline:hover a .large-module-text a, .footer:hover a .large-module-text .headline a, .headline .footer:hover a .large-module-text a, .intro-module:hover a .large-module-text .headline a, .headline .intro-module:hover a .large-module-text a, .video-module:hover a .large-module-text .headline a, .headline .video-module:hover a .large-module-text a, .xlarge-text-only-module:hover a .large-module-text .headline a, .headline .xlarge-text-only-module:hover a .large-module-text a, .page-header:hover a .large-module-text .headline a, .headline .page-header:hover a .large-module-text a, .text-module:hover a .large-module-text .headline a, .headline .text-module:hover a .large-module-text a, .xlarge-module-tall:hover a .large-module-text .headline a, .headline .xlarge-module-tall:hover a .large-module-text a, .module:hover a .medium-module-text .headline a, .headline .module:hover a .medium-module-text a, .xsmall-module:hover a .medium-module-text .headline a, .headline .xsmall-module:hover a .medium-module-text a, .xsmall-module-tall:hover a .medium-module-text .headline a, .headline .xsmall-module-tall:hover a .medium-module-text a, .small-module:hover a .medium-module-text .headline a, .headline .small-module:hover a .medium-module-text a, .small-text-only-module:hover a .medium-module-text .headline a, .headline .small-text-only-module:hover a .medium-module-text a, .small-module-tall:hover a .medium-module-text .headline a, .headline .small-module-tall:hover a .medium-module-text a, .medium-module:hover a .medium-module-text .headline a, .headline .medium-module:hover a .medium-module-text a, .medium-module-tall:hover a .medium-module-text .headline a, .headline .medium-module-tall:hover a .medium-module-text a, .large-module:hover a .medium-module-text .headline a, .headline .large-module:hover a .medium-module-text a, .large-text-only-module:hover a .medium-module-text .headline a, .headline .large-text-only-module:hover a .medium-module-text a, .large-module-tall:hover a .medium-module-text .headline a, .headline .large-module-tall:hover a .medium-module-text a, .xlarge-module:hover a .medium-module-text .headline a, .headline .xlarge-module:hover a .medium-module-text a, .headline:hover a .medium-module-text a, .footer:hover a .medium-module-text .headline a, .headline .footer:hover a .medium-module-text a, .intro-module:hover a .medium-module-text .headline a, .headline .intro-module:hover a .medium-module-text a, .video-module:hover a .medium-module-text .headline a, .headline .video-module:hover a .medium-module-text a, .xlarge-text-only-module:hover a .medium-module-text .headline a, .headline .xlarge-text-only-module:hover a .medium-module-text a, .page-header:hover a .medium-module-text .headline a, .headline .page-header:hover a .medium-module-text a, .text-module:hover a .medium-module-text .headline a, .headline .text-module:hover a .medium-module-text a, .xlarge-module-tall:hover a .medium-module-text .headline a, .headline .xlarge-module-tall:hover a .medium-module-text a, .module:hover a .small-module-text .headline a, .headline .module:hover a .small-module-text a, .xsmall-module:hover a .small-module-text .headline a, .headline .xsmall-module:hover a .small-module-text a, .xsmall-module-tall:hover a .small-module-text .headline a, .headline .xsmall-module-tall:hover a .small-module-text a, .small-module:hover a .small-module-text .headline a, .headline .small-module:hover a .small-module-text a, .small-text-only-module:hover a .small-module-text .headline a, .headline .small-text-only-module:hover a .small-module-text a, .small-module-tall:hover a .small-module-text .headline a, .headline .small-module-tall:hover a .small-module-text a, .medium-module:hover a .small-module-text .headline a, .headline .medium-module:hover a .small-module-text a, .medium-module-tall:hover a .small-module-text .headline a, .headline .medium-module-tall:hover a .small-module-text a, .large-module:hover a .small-module-text .headline a, .headline .large-module:hover a .small-module-text a, .large-text-only-module:hover a .small-module-text .headline a, .headline .large-text-only-module:hover a .small-module-text a, .large-module-tall:hover a .small-module-text .headline a, .headline .large-module-tall:hover a .small-module-text a, .xlarge-module:hover a .small-module-text .headline a, .headline .xlarge-module:hover a .small-module-text a, .headline:hover a .small-module-text a, .footer:hover a .small-module-text .headline a, .headline .footer:hover a .small-module-text a, .intro-module:hover a .small-module-text .headline a, .headline .intro-module:hover a .small-module-text a, .video-module:hover a .small-module-text .headline a, .headline .video-module:hover a .small-module-text a, .xlarge-text-only-module:hover a .small-module-text .headline a, .headline .xlarge-text-only-module:hover a .small-module-text a, .page-header:hover a .small-module-text .headline a, .headline .page-header:hover a .small-module-text a, .text-module:hover a .small-module-text .headline a, .headline .text-module:hover a .small-module-text a, .xlarge-module-tall:hover a .small-module-text .headline a, .headline .xlarge-module-tall:hover a .small-module-text a, .module:hover a .module-text .footer a, .footer .module:hover a .module-text a, .xsmall-module:hover a .module-text .footer a, .footer .xsmall-module:hover a .module-text a, .xsmall-module-tall:hover a .module-text .footer a, .footer .xsmall-module-tall:hover a .module-text a, .small-module:hover a .module-text .footer a, .footer .small-module:hover a .module-text a, .small-text-only-module:hover a .module-text .footer a, .footer .small-text-only-module:hover a .module-text a, .small-module-tall:hover a .module-text .footer a, .footer .small-module-tall:hover a .module-text a, .medium-module:hover a .module-text .footer a, .footer .medium-module:hover a .module-text a, .medium-module-tall:hover a .module-text .footer a, .footer .medium-module-tall:hover a .module-text a, .large-module:hover a .module-text .footer a, .footer .large-module:hover a .module-text a, .large-text-only-module:hover a .module-text .footer a, .footer .large-text-only-module:hover a .module-text a, .large-module-tall:hover a .module-text .footer a, .footer .large-module-tall:hover a .module-text a, .xlarge-module:hover a .module-text .footer a, .footer .xlarge-module:hover a .module-text a, .headline:hover a .module-text .footer a, .footer .headline:hover a .module-text a, .footer:hover a .module-text a, .intro-module:hover a .module-text .footer a, .footer .intro-module:hover a .module-text a, .video-module:hover a .module-text .footer a, .footer .video-module:hover a .module-text a, .xlarge-text-only-module:hover a .module-text .footer a, .footer .xlarge-text-only-module:hover a .module-text a, .page-header:hover a .module-text .footer a, .footer .page-header:hover a .module-text a, .text-module:hover a .module-text .footer a, .footer .text-module:hover a .module-text a, .xlarge-module-tall:hover a .module-text .footer a, .footer .xlarge-module-tall:hover a .module-text a, .module:hover a .xlarge-module-text .footer a, .footer .module:hover a .xlarge-module-text a, .xsmall-module:hover a .xlarge-module-text .footer a, .footer .xsmall-module:hover a .xlarge-module-text a, .xsmall-module-tall:hover a .xlarge-module-text .footer a, .footer .xsmall-module-tall:hover a .xlarge-module-text a, .small-module:hover a .xlarge-module-text .footer a, .footer .small-module:hover a .xlarge-module-text a, .small-text-only-module:hover a .xlarge-module-text .footer a, .footer .small-text-only-module:hover a .xlarge-module-text a, .small-module-tall:hover a .xlarge-module-text .footer a, .footer .small-module-tall:hover a .xlarge-module-text a, .medium-module:hover a .xlarge-module-text .footer a, .footer .medium-module:hover a .xlarge-module-text a, .medium-module-tall:hover a .xlarge-module-text .footer a, .footer .medium-module-tall:hover a .xlarge-module-text a, .large-module:hover a .xlarge-module-text .footer a, .footer .large-module:hover a .xlarge-module-text a, .large-text-only-module:hover a .xlarge-module-text .footer a, .footer .large-text-only-module:hover a .xlarge-module-text a, .large-module-tall:hover a .xlarge-module-text .footer a, .footer .large-module-tall:hover a .xlarge-module-text a, .xlarge-module:hover a .xlarge-module-text .footer a, .footer .xlarge-module:hover a .xlarge-module-text a, .headline:hover a .xlarge-module-text .footer a, .footer .headline:hover a .xlarge-module-text a, .footer:hover a .xlarge-module-text a, .intro-module:hover a .xlarge-module-text .footer a, .footer .intro-module:hover a .xlarge-module-text a, .video-module:hover a .xlarge-module-text .footer a, .footer .video-module:hover a .xlarge-module-text a, .xlarge-text-only-module:hover a .xlarge-module-text .footer a, .footer .xlarge-text-only-module:hover a .xlarge-module-text a, .page-header:hover a .xlarge-module-text .footer a, .footer .page-header:hover a .xlarge-module-text a, .text-module:hover a .xlarge-module-text .footer a, .footer .text-module:hover a .xlarge-module-text a, .xlarge-module-tall:hover a .xlarge-module-text .footer a, .footer .xlarge-module-tall:hover a .xlarge-module-text a, .module:hover a .large-module-text .footer a, .footer .module:hover a .large-module-text a, .xsmall-module:hover a .large-module-text .footer a, .footer .xsmall-module:hover a .large-module-text a, .xsmall-module-tall:hover a .large-module-text .footer a, .footer .xsmall-module-tall:hover a .large-module-text a, .small-module:hover a .large-module-text .footer a, .footer .small-module:hover a .large-module-text a, .small-text-only-module:hover a .large-module-text .footer a, .footer .small-text-only-module:hover a .large-module-text a, .small-module-tall:hover a .large-module-text .footer a, .footer .small-module-tall:hover a .large-module-text a, .medium-module:hover a .large-module-text .footer a, .footer .medium-module:hover a .large-module-text a, .medium-module-tall:hover a .large-module-text .footer a, .footer .medium-module-tall:hover a .large-module-text a, .large-module:hover a .large-module-text .footer a, .footer .large-module:hover a .large-module-text a, .large-text-only-module:hover a .large-module-text .footer a, .footer .large-text-only-module:hover a .large-module-text a, .large-module-tall:hover a .large-module-text .footer a, .footer .large-module-tall:hover a .large-module-text a, .xlarge-module:hover a .large-module-text .footer a, .footer .xlarge-module:hover a .large-module-text a, .headline:hover a .large-module-text .footer a, .footer .headline:hover a .large-module-text a, .footer:hover a .large-module-text a, .intro-module:hover a .large-module-text .footer a, .footer .intro-module:hover a .large-module-text a, .video-module:hover a .large-module-text .footer a, .footer .video-module:hover a .large-module-text a, .xlarge-text-only-module:hover a .large-module-text .footer a, .footer .xlarge-text-only-module:hover a .large-module-text a, .page-header:hover a .large-module-text .footer a, .footer .page-header:hover a .large-module-text a, .text-module:hover a .large-module-text .footer a, .footer .text-module:hover a .large-module-text a, .xlarge-module-tall:hover a .large-module-text .footer a, .footer .xlarge-module-tall:hover a .large-module-text a, .module:hover a .medium-module-text .footer a, .footer .module:hover a .medium-module-text a, .xsmall-module:hover a .medium-module-text .footer a, .footer .xsmall-module:hover a .medium-module-text a, .xsmall-module-tall:hover a .medium-module-text .footer a, .footer .xsmall-module-tall:hover a .medium-module-text a, .small-module:hover a .medium-module-text .footer a, .footer .small-module:hover a .medium-module-text a, .small-text-only-module:hover a .medium-module-text .footer a, .footer .small-text-only-module:hover a .medium-module-text a, .small-module-tall:hover a .medium-module-text .footer a, .footer .small-module-tall:hover a .medium-module-text a, .medium-module:hover a .medium-module-text .footer a, .footer .medium-module:hover a .medium-module-text a, .medium-module-tall:hover a .medium-module-text .footer a, .footer .medium-module-tall:hover a .medium-module-text a, .large-module:hover a .medium-module-text .footer a, .footer .large-module:hover a .medium-module-text a, .large-text-only-module:hover a .medium-module-text .footer a, .footer .large-text-only-module:hover a .medium-module-text a, .large-module-tall:hover a .medium-module-text .footer a, .footer .large-module-tall:hover a .medium-module-text a, .xlarge-module:hover a .medium-module-text .footer a, .footer .xlarge-module:hover a .medium-module-text a, .headline:hover a .medium-module-text .footer a, .footer .headline:hover a .medium-module-text a, .footer:hover a .medium-module-text a, .intro-module:hover a .medium-module-text .footer a, .footer .intro-module:hover a .medium-module-text a, .video-module:hover a .medium-module-text .footer a, .footer .video-module:hover a .medium-module-text a, .xlarge-text-only-module:hover a .medium-module-text .footer a, .footer .xlarge-text-only-module:hover a .medium-module-text a, .page-header:hover a .medium-module-text .footer a, .footer .page-header:hover a .medium-module-text a, .text-module:hover a .medium-module-text .footer a, .footer .text-module:hover a .medium-module-text a, .xlarge-module-tall:hover a .medium-module-text .footer a, .footer .xlarge-module-tall:hover a .medium-module-text a, .module:hover a .small-module-text .footer a, .footer .module:hover a .small-module-text a, .xsmall-module:hover a .small-module-text .footer a, .footer .xsmall-module:hover a .small-module-text a, .xsmall-module-tall:hover a .small-module-text .footer a, .footer .xsmall-module-tall:hover a .small-module-text a, .small-module:hover a .small-module-text .footer a, .footer .small-module:hover a .small-module-text a, .small-text-only-module:hover a .small-module-text .footer a, .footer .small-text-only-module:hover a .small-module-text a, .small-module-tall:hover a .small-module-text .footer a, .footer .small-module-tall:hover a .small-module-text a, .medium-module:hover a .small-module-text .footer a, .footer .medium-module:hover a .small-module-text a, .medium-module-tall:hover a .small-module-text .footer a, .footer .medium-module-tall:hover a .small-module-text a, .large-module:hover a .small-module-text .footer a, .footer .large-module:hover a .small-module-text a, .large-text-only-module:hover a .small-module-text .footer a, .footer .large-text-only-module:hover a .small-module-text a, .large-module-tall:hover a .small-module-text .footer a, .footer .large-module-tall:hover a .small-module-text a, .xlarge-module:hover a .small-module-text .footer a, .footer .xlarge-module:hover a .small-module-text a, .headline:hover a .small-module-text .footer a, .footer .headline:hover a .small-module-text a, .footer:hover a .small-module-text a, .intro-module:hover a .small-module-text .footer a, .footer .intro-module:hover a .small-module-text a, .video-module:hover a .small-module-text .footer a, .footer .video-module:hover a .small-module-text a, .xlarge-text-only-module:hover a .small-module-text .footer a, .footer .xlarge-text-only-module:hover a .small-module-text a, .page-header:hover a .small-module-text .footer a, .footer .page-header:hover a .small-module-text a, .text-module:hover a .small-module-text .footer a, .footer .text-module:hover a .small-module-text a, .xlarge-module-tall:hover a .small-module-text .footer a, .footer .xlarge-module-tall:hover a .small-module-text a, .module:hover a .module-text h4, .xsmall-module:hover a .module-text h4, .xsmall-module-tall:hover a .module-text h4, .small-module:hover a .module-text h4, .small-text-only-module:hover a .module-text h4, .small-module-tall:hover a .module-text h4, .medium-module:hover a .module-text h4, .medium-module-tall:hover a .module-text h4, .large-module:hover a .module-text h4, .large-text-only-module:hover a .module-text h4, .large-module-tall:hover a .module-text h4, .xlarge-module:hover a .module-text h4, .headline:hover a .module-text h4, .footer:hover a .module-text h4, .intro-module:hover a .module-text h4, .video-module:hover a .module-text h4, .xlarge-text-only-module:hover a .module-text h4, .page-header:hover a .module-text h4, .text-module:hover a .module-text h4, .xlarge-module-tall:hover a .module-text h4, .module:hover a .xlarge-module-text h4, .xsmall-module:hover a .xlarge-module-text h4, .xsmall-module-tall:hover a .xlarge-module-text h4, .small-module:hover a .xlarge-module-text h4, .small-text-only-module:hover a .xlarge-module-text h4, .small-module-tall:hover a .xlarge-module-text h4, .medium-module:hover a .xlarge-module-text h4, .medium-module-tall:hover a .xlarge-module-text h4, .large-module:hover a .xlarge-module-text h4, .large-text-only-module:hover a .xlarge-module-text h4, .large-module-tall:hover a .xlarge-module-text h4, .xlarge-module:hover a .xlarge-module-text h4, .headline:hover a .xlarge-module-text h4, .footer:hover a .xlarge-module-text h4, .intro-module:hover a .xlarge-module-text h4, .video-module:hover a .xlarge-module-text h4, .xlarge-text-only-module:hover a .xlarge-module-text h4, .page-header:hover a .xlarge-module-text h4, .text-module:hover a .xlarge-module-text h4, .xlarge-module-tall:hover a .xlarge-module-text h4, .module:hover a .large-module-text h4, .xsmall-module:hover a .large-module-text h4, .xsmall-module-tall:hover a .large-module-text h4, .small-module:hover a .large-module-text h4, .small-text-only-module:hover a .large-module-text h4, .small-module-tall:hover a .large-module-text h4, .medium-module:hover a .large-module-text h4, .medium-module-tall:hover a .large-module-text h4, .large-module:hover a .large-module-text h4, .large-text-only-module:hover a .large-module-text h4, .large-module-tall:hover a .large-module-text h4, .xlarge-module:hover a .large-module-text h4, .headline:hover a .large-module-text h4, .footer:hover a .large-module-text h4, .intro-module:hover a .large-module-text h4, .video-module:hover a .large-module-text h4, .xlarge-text-only-module:hover a .large-module-text h4, .page-header:hover a .large-module-text h4, .text-module:hover a .large-module-text h4, .xlarge-module-tall:hover a .large-module-text h4, .module:hover a .medium-module-text h4, .xsmall-module:hover a .medium-module-text h4, .xsmall-module-tall:hover a .medium-module-text h4, .small-module:hover a .medium-module-text h4, .small-text-only-module:hover a .medium-module-text h4, .small-module-tall:hover a .medium-module-text h4, .medium-module:hover a .medium-module-text h4, .medium-module-tall:hover a .medium-module-text h4, .large-module:hover a .medium-module-text h4, .large-text-only-module:hover a .medium-module-text h4, .large-module-tall:hover a .medium-module-text h4, .xlarge-module:hover a .medium-module-text h4, .headline:hover a .medium-module-text h4, .footer:hover a .medium-module-text h4, .intro-module:hover a .medium-module-text h4, .video-module:hover a .medium-module-text h4, .xlarge-text-only-module:hover a .medium-module-text h4, .page-header:hover a .medium-module-text h4, .text-module:hover a .medium-module-text h4, .xlarge-module-tall:hover a .medium-module-text h4, .module:hover a .small-module-text h4, .xsmall-module:hover a .small-module-text h4, .xsmall-module-tall:hover a .small-module-text h4, .small-module:hover a .small-module-text h4, .small-text-only-module:hover a .small-module-text h4, .small-module-tall:hover a .small-module-text h4, .medium-module:hover a .small-module-text h4, .medium-module-tall:hover a .small-module-text h4, .large-module:hover a .small-module-text h4, .large-text-only-module:hover a .small-module-text h4, .large-module-tall:hover a .small-module-text h4, .xlarge-module:hover a .small-module-text h4, .headline:hover a .small-module-text h4, .footer:hover a .small-module-text h4, .intro-module:hover a .small-module-text h4, .video-module:hover a .small-module-text h4, .xlarge-text-only-module:hover a .small-module-text h4, .page-header:hover a .small-module-text h4, .text-module:hover a .small-module-text h4, .xlarge-module-tall:hover a .small-module-text h4 {
+    background: #42393c;
+    color: white;
+}
+.module a, .xsmall-module a, .xsmall-module-tall a, .small-module a, .small-text-only-module a, .small-module-tall a, .medium-module a, .medium-module-tall a, .large-module a, .large-text-only-module a, .large-module-tall a, .xlarge-module a, .headline a, .footer a, .intro-module a, .video-module a, .xlarge-text-only-module a, .page-header a, .text-module a, .xlarge-module-tall a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.module.blue, .blue.xsmall-module, .blue.xsmall-module-tall, .blue.small-module, .blue.small-text-only-module, .blue.small-module-tall, .blue.medium-module, .blue.medium-module-tall, .blue.large-module, .blue.large-text-only-module, .blue.large-module-tall, .blue.xlarge-module, .blue.headline, .blue.footer, .blue.intro-module, .blue.video-module, .blue.xlarge-text-only-module, .blue.page-header, .blue.text-module, .blue.xlarge-module-tall {
+    background: #00bcdd;
+}
+.module.pink, .pink.xsmall-module, .pink.xsmall-module-tall, .pink.small-module, .pink.small-text-only-module, .pink.small-module-tall, .pink.medium-module, .pink.medium-module-tall, .pink.large-module, .pink.large-text-only-module, .pink.large-module-tall, .pink.xlarge-module, .pink.headline, .pink.footer, .pink.intro-module, .pink.video-module, .pink.xlarge-text-only-module, .pink.page-header, .pink.text-module, .pink.xlarge-module-tall {
+    background: #ee478d;
+}
+.module.gray, .gray.xsmall-module, .gray.xsmall-module-tall, .gray.small-module, .gray.small-text-only-module, .gray.small-module-tall, .gray.medium-module, .gray.medium-module-tall, .gray.large-module, .gray.large-text-only-module, .gray.large-module-tall, .gray.xlarge-module, .gray.headline, .gray.footer, .gray.intro-module, .gray.video-module, .gray.xlarge-text-only-module, .gray.page-header, .gray.text-module, .gray.xlarge-module-tall {
+    background: #42393c;
+}
+.module.white, .white.xsmall-module, .white.xsmall-module-tall, .white.small-module, .white.small-text-only-module, .white.small-module-tall, .white.medium-module, .white.medium-module-tall, .white.large-module, .white.large-text-only-module, .white.large-module-tall, .white.xlarge-module, .white.headline, .white.footer, .white.intro-module, .white.video-module, .white.xlarge-text-only-module, .white.page-header, .white.text-module, .white.xlarge-module-tall {
+    background: white;
+}
+.module.white h2, .white.xsmall-module h2, .white.xsmall-module-tall h2, .white.small-module h2, .white.small-text-only-module h2, .white.small-module-tall h2, .white.medium-module h2, .white.medium-module-tall h2, .white.large-module h2, .white.large-text-only-module h2, .white.large-module-tall h2, .white.xlarge-module h2, .white.headline h2, .white.footer h2, .white.intro-module h2, .white.video-module h2, .white.xlarge-text-only-module h2, .white.page-header h2, .white.text-module h2, .white.xlarge-module-tall h2, .module.white .headline a, .headline .module.white a, .white.xsmall-module .headline a, .headline .white.xsmall-module a, .white.xsmall-module-tall .headline a, .headline .white.xsmall-module-tall a, .white.small-module .headline a, .headline .white.small-module a, .white.small-text-only-module .headline a, .headline .white.small-text-only-module a, .white.small-module-tall .headline a, .headline .white.small-module-tall a, .white.medium-module .headline a, .headline .white.medium-module a, .white.medium-module-tall .headline a, .headline .white.medium-module-tall a, .white.large-module .headline a, .headline .white.large-module a, .white.large-text-only-module .headline a, .headline .white.large-text-only-module a, .white.large-module-tall .headline a, .headline .white.large-module-tall a, .white.xlarge-module .headline a, .headline .white.xlarge-module a, .white.headline a, .white.intro-module .headline a, .headline .white.intro-module a, .white.video-module .headline a, .headline .white.video-module a, .white.xlarge-text-only-module .headline a, .headline .white.xlarge-text-only-module a, .white.page-header .headline a, .headline .white.page-header a, .white.text-module .headline a, .headline .white.text-module a, .white.xlarge-module-tall .headline a, .headline .white.xlarge-module-tall a, .module.white .footer a, .footer .module.white a, .white.xsmall-module .footer a, .footer .white.xsmall-module a, .white.xsmall-module-tall .footer a, .footer .white.xsmall-module-tall a, .white.small-module .footer a, .footer .white.small-module a, .white.small-text-only-module .footer a, .footer .white.small-text-only-module a, .white.small-module-tall .footer a, .footer .white.small-module-tall a, .white.medium-module .footer a, .footer .white.medium-module a, .white.medium-module-tall .footer a, .footer .white.medium-module-tall a, .white.large-module .footer a, .footer .white.large-module a, .white.large-text-only-module .footer a, .footer .white.large-text-only-module a, .white.large-module-tall .footer a, .footer .white.large-module-tall a, .white.xlarge-module .footer a, .footer .white.xlarge-module a, .white.footer a, .white.intro-module .footer a, .footer .white.intro-module a, .white.video-module .footer a, .footer .white.video-module a, .white.xlarge-text-only-module .footer a, .footer .white.xlarge-text-only-module a, .white.page-header .footer a, .footer .white.page-header a, .white.text-module .footer a, .footer .white.text-module a, .white.xlarge-module-tall .footer a, .footer .white.xlarge-module-tall a {
+    color: #42393c;
+    margin-bottom: 10px;
+}
+.module.green, .green.xsmall-module, .green.xsmall-module-tall, .green.small-module, .green.small-text-only-module, .green.small-module-tall, .green.medium-module, .green.medium-module-tall, .green.large-module, .green.large-text-only-module, .green.large-module-tall, .green.xlarge-module, .green.headline, .green.footer, .green.intro-module, .green.video-module, .green.xlarge-text-only-module, .green.page-header, .green.text-module, .green.xlarge-module-tall {
+    background: #8dc73f;
+}
+.group, .xsmall-group, .xsmall-group-tall, .small-group, .small-group-tall, .medium-group, .medium-group-tall, .large-group, .large-group-tall, .xlarge-group, .xlarge-group-tall {
+    padding: 0;
+    height: 400px;
+}
+.row .xsmall-module {
+    height: auto;
+    padding: 25px;
+}
+.row .small-module, .row .small-text-only-module {
+    height: auto;
+    padding: 25px;
+}
+.row .medium-module {
+    height: auto;
+    padding: 25px;
+}
+.row .large-module, .row .large-text-only-module {
+    height: auto;
+    padding: 25px;
+}
+.row .xlarge-module, .row .headline, .row .footer, .row .intro-module, .row .video-module, .row .xlarge-text-only-module, .row .page-header, .row .text-module {
+    height: auto;
+    padding: 25px;
+}
+/* Images */
+ .display-images {
+    background: white;
+}
+.display-image, .display-image-vertical {
+    background: white;
+    list-style: none;
+    width: 70%;
+    height: auto;
+    float: left;
+    text-align: center;
+    margin: 20px 15%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.display-image h2, .display-image-vertical h2, .display-image .headline a, .headline .display-image a, .display-image-vertical .headline a, .headline .display-image-vertical a, .display-image .footer a, .footer .display-image a, .display-image-vertical .footer a, .footer .display-image-vertical a, .display-image p, .display-image-vertical p {
+    color: #42393c;
+    text-align: center;
+}
+.display-image h2, .display-image-vertical h2, .display-image .headline a, .headline .display-image a, .display-image-vertical .headline a, .headline .display-image-vertical a, .display-image .footer a, .footer .display-image a, .display-image-vertical .footer a, .footer .display-image-vertical a {
+    margin-top: 10px;
+}
+.display-image p, .display-image-vertical p {
+    text-align: center;
+    font-size: 20px;
+    line-height: 22px;
+}
+.display-image img, .display-image-vertical img {
+    display: inline-block;
+    width: 100%;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+.display-image-vertical img {
+    width: 45%;
+}
+.headline, .footer {
+    height: auto;
+    text-align: center;
+}
+.headline a, .footer a {
+    color: white;
+    text-decoration: none;
+}
+.headline {
+    padding: 25px 25px 0 25px;
+}
+.footer:hover {
+    opacity: 0.85;
+}
+.xsmall-module-tall {
+    height: 550px;
+}
+.xsmall-group .xsmall-module {
+    width: 100%;
+    height: 200px;
+}
+.xsmall-group-tall {
+    height: 550px;
+}
+.xsmall-group-tall .xsmall-module-tall {
+    width: 100%;
+    height: 275px;
+}
+.small-module-tall {
+    height: 550px;
+}
+.small-group .small-module, .small-group .small-text-only-module {
+    width: 100%;
+    height: 200px;
+}
+.small-group-tall {
+    height: 550px;
+}
+.small-group-tall .small-module-tall {
+    width: 100%;
+    height: 275px;
+}
+.medium-module-tall {
+    height: 550px;
+}
+.medium-group .medium-module {
+    width: 100%;
+    height: 200px;
+}
+.medium-group-tall {
+    height: 550px;
+}
+.medium-group-tall .medium-module-tall {
+    width: 100%;
+    height: 275px;
+}
+.large-module-tall {
+    height: 550px;
+}
+.large-group .large-module, .large-group .large-text-only-module {
+    width: 100%;
+    height: 200px;
+}
+.large-group-tall {
+    height: 550px;
+}
+.large-group-tall .large-module-tall {
+    width: 100%;
+    height: 275px;
+}
+.xlarge-module-tall {
+    height: 550px;
+}
+.xlarge-group .xlarge-module, .xlarge-group .headline, .xlarge-group .footer, .xlarge-group .intro-module, .xlarge-group .video-module, .xlarge-group .xlarge-text-only-module, .xlarge-group .page-header, .xlarge-group .text-module {
+    width: 100%;
+    height: 200px;
+}
+.xlarge-group-tall {
+    height: 550px;
+}
+.xlarge-group-tall .xlarge-module-tall {
+    width: 100%;
+    height: 275px;
+}
+.xsmall-group, .xsmall-module, .xsmall-module-tall, .xsmall-group-tall {
+    width: 20%;
+}
+.small-group, .small-module, .small-text-only-module, .small-module-tall, .small-group-tall {
+    width: 40%;
+}
+.medium-group, .medium-module, .medium-module-tall, .medium-group-tall {
+    width: 60%;
+}
+.large-group, .large-module, .large-text-only-module, .large-module-tall, .large-group-tall {
+    width: 80%;
+}
+.xlarge-group, .xlarge-module, .headline, .footer, .intro-module, .video-module, .xlarge-text-only-module, .page-header, .text-module, .xlarge-module-tall, .xlarge-group-tall {
+    width: 100%;
+}
+.intro-module {
+    height: 600px;
+}
+.video-module {
+    background: white;
+    display: inline-block;
+    padding: 25px;
+}
+.video-module iframe {
+    margin-left: 15%;
+    margin-right: 15%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 70%;
+}
+/* Module Text */
+ .module-text, .xlarge-module-text, .large-module-text, .medium-module-text, .small-module-text {
+    display: block;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    text-align: right;
+}
+.module-text h1, .xlarge-module-text h1, .large-module-text h1, .medium-module-text h1, .small-module-text h1 {
+    padding: 4px 16px;
+}
+.module-text h2, .xlarge-module-text h2, .large-module-text h2, .medium-module-text h2, .small-module-text h2, .module-text .headline a, .headline .module-text a, .xlarge-module-text .headline a, .headline .xlarge-module-text a, .large-module-text .headline a, .headline .large-module-text a, .medium-module-text .headline a, .headline .medium-module-text a, .small-module-text .headline a, .headline .small-module-text a, .module-text .footer a, .footer .module-text a, .xlarge-module-text .footer a, .footer .xlarge-module-text a, .large-module-text .footer a, .footer .large-module-text a, .medium-module-text .footer a, .footer .medium-module-text a, .small-module-text .footer a, .footer .small-module-text a, .module-text h3, .xlarge-module-text h3, .large-module-text h3, .medium-module-text h3, .small-module-text h3, .module-text h4, .xlarge-module-text h4, .large-module-text h4, .medium-module-text h4, .small-module-text h4 {
+    padding: 4px 12px;
+}
+.module-text.pink h1, .pink.xlarge-module-text h1, .pink.large-module-text h1, .pink.medium-module-text h1, .pink.small-module-text h1, .module-text.pink h2, .pink.xlarge-module-text h2, .pink.large-module-text h2, .pink.medium-module-text h2, .pink.small-module-text h2, .module-text.pink .headline a, .headline .module-text.pink a, .pink.xlarge-module-text .headline a, .headline .pink.xlarge-module-text a, .pink.large-module-text .headline a, .headline .pink.large-module-text a, .pink.medium-module-text .headline a, .headline .pink.medium-module-text a, .pink.small-module-text .headline a, .headline .pink.small-module-text a, .module-text.pink .footer a, .footer .module-text.pink a, .pink.xlarge-module-text .footer a, .footer .pink.xlarge-module-text a, .pink.large-module-text .footer a, .footer .pink.large-module-text a, .pink.medium-module-text .footer a, .footer .pink.medium-module-text a, .pink.small-module-text .footer a, .footer .pink.small-module-text a, .module-text.pink h3, .pink.xlarge-module-text h3, .pink.large-module-text h3, .pink.medium-module-text h3, .pink.small-module-text h3, .module-text.pink h4, .pink.xlarge-module-text h4, .pink.large-module-text h4, .pink.medium-module-text h4, .pink.small-module-text h4, .module-text.pink h5, .pink.xlarge-module-text h5, .pink.large-module-text h5, .pink.medium-module-text h5, .pink.small-module-text h5, .module-text.pink h6, .pink.xlarge-module-text h6, .pink.large-module-text h6, .pink.medium-module-text h6, .pink.small-module-text h6 {
+    background: #ee478d;
+}
+.module-text.blue h1, .blue.xlarge-module-text h1, .blue.large-module-text h1, .blue.medium-module-text h1, .blue.small-module-text h1, .module-text.blue h2, .blue.xlarge-module-text h2, .blue.large-module-text h2, .blue.medium-module-text h2, .blue.small-module-text h2, .module-text.blue .headline a, .headline .module-text.blue a, .blue.xlarge-module-text .headline a, .headline .blue.xlarge-module-text a, .blue.large-module-text .headline a, .headline .blue.large-module-text a, .blue.medium-module-text .headline a, .headline .blue.medium-module-text a, .blue.small-module-text .headline a, .headline .blue.small-module-text a, .module-text.blue .footer a, .footer .module-text.blue a, .blue.xlarge-module-text .footer a, .footer .blue.xlarge-module-text a, .blue.large-module-text .footer a, .footer .blue.large-module-text a, .blue.medium-module-text .footer a, .footer .blue.medium-module-text a, .blue.small-module-text .footer a, .footer .blue.small-module-text a, .module-text.blue h3, .blue.xlarge-module-text h3, .blue.large-module-text h3, .blue.medium-module-text h3, .blue.small-module-text h3, .module-text.blue h4, .blue.xlarge-module-text h4, .blue.large-module-text h4, .blue.medium-module-text h4, .blue.small-module-text h4, .module-text.blue h5, .blue.xlarge-module-text h5, .blue.large-module-text h5, .blue.medium-module-text h5, .blue.small-module-text h5, .module-text.blue h6, .blue.xlarge-module-text h6, .blue.large-module-text h6, .blue.medium-module-text h6, .blue.small-module-text h6 {
+    background: #00bcdd;
+}
+.module-text.gray h1, .gray.xlarge-module-text h1, .gray.large-module-text h1, .gray.medium-module-text h1, .gray.small-module-text h1, .module-text.gray h2, .gray.xlarge-module-text h2, .gray.large-module-text h2, .gray.medium-module-text h2, .gray.small-module-text h2, .module-text.gray .headline a, .headline .module-text.gray a, .gray.xlarge-module-text .headline a, .headline .gray.xlarge-module-text a, .gray.large-module-text .headline a, .headline .gray.large-module-text a, .gray.medium-module-text .headline a, .headline .gray.medium-module-text a, .gray.small-module-text .headline a, .headline .gray.small-module-text a, .module-text.gray .footer a, .footer .module-text.gray a, .gray.xlarge-module-text .footer a, .footer .gray.xlarge-module-text a, .gray.large-module-text .footer a, .footer .gray.large-module-text a, .gray.medium-module-text .footer a, .footer .gray.medium-module-text a, .gray.small-module-text .footer a, .footer .gray.small-module-text a, .module-text.gray h3, .gray.xlarge-module-text h3, .gray.large-module-text h3, .gray.medium-module-text h3, .gray.small-module-text h3, .module-text.gray h4, .gray.xlarge-module-text h4, .gray.large-module-text h4, .gray.medium-module-text h4, .gray.small-module-text h4, .module-text.gray h5, .gray.xlarge-module-text h5, .gray.large-module-text h5, .gray.medium-module-text h5, .gray.small-module-text h5, .module-text.gray h6, .gray.xlarge-module-text h6, .gray.large-module-text h6, .gray.medium-module-text h6, .gray.small-module-text h6 {
+    background: #42393c;
+}
+.module-text.green h1, .green.xlarge-module-text h1, .green.large-module-text h1, .green.medium-module-text h1, .green.small-module-text h1, .module-text.green h2, .green.xlarge-module-text h2, .green.large-module-text h2, .green.medium-module-text h2, .green.small-module-text h2, .module-text.green .headline a, .headline .module-text.green a, .green.xlarge-module-text .headline a, .headline .green.xlarge-module-text a, .green.large-module-text .headline a, .headline .green.large-module-text a, .green.medium-module-text .headline a, .headline .green.medium-module-text a, .green.small-module-text .headline a, .headline .green.small-module-text a, .module-text.green .footer a, .footer .module-text.green a, .green.xlarge-module-text .footer a, .footer .green.xlarge-module-text a, .green.large-module-text .footer a, .footer .green.large-module-text a, .green.medium-module-text .footer a, .footer .green.medium-module-text a, .green.small-module-text .footer a, .footer .green.small-module-text a, .module-text.green h3, .green.xlarge-module-text h3, .green.large-module-text h3, .green.medium-module-text h3, .green.small-module-text h3, .module-text.green h4, .green.xlarge-module-text h4, .green.large-module-text h4, .green.medium-module-text h4, .green.small-module-text h4, .module-text.green h5, .green.xlarge-module-text h5, .green.large-module-text h5, .green.medium-module-text h5, .green.small-module-text h5, .module-text.green h6, .green.xlarge-module-text h6, .green.large-module-text h6, .green.medium-module-text h6, .green.small-module-text h6 {
+    background: #8dc73f;
+}
+.module-text.white h1, .white.xlarge-module-text h1, .white.large-module-text h1, .white.medium-module-text h1, .white.small-module-text h1, .module-text.white h2, .white.xlarge-module-text h2, .white.large-module-text h2, .white.medium-module-text h2, .white.small-module-text h2, .module-text.white .headline a, .headline .module-text.white a, .white.xlarge-module-text .headline a, .headline .white.xlarge-module-text a, .white.large-module-text .headline a, .headline .white.large-module-text a, .white.medium-module-text .headline a, .headline .white.medium-module-text a, .white.small-module-text .headline a, .headline .white.small-module-text a, .module-text.white .footer a, .footer .module-text.white a, .white.xlarge-module-text .footer a, .footer .white.xlarge-module-text a, .white.large-module-text .footer a, .footer .white.large-module-text a, .white.medium-module-text .footer a, .footer .white.medium-module-text a, .white.small-module-text .footer a, .footer .white.small-module-text a, .module-text.white h3, .white.xlarge-module-text h3, .white.large-module-text h3, .white.medium-module-text h3, .white.small-module-text h3, .module-text.white h4, .white.xlarge-module-text h4, .white.large-module-text h4, .white.medium-module-text h4, .white.small-module-text h4, .module-text.white h5, .white.xlarge-module-text h5, .white.large-module-text h5, .white.medium-module-text h5, .white.small-module-text h5, .module-text.white h6, .white.xlarge-module-text h6, .white.large-module-text h6, .white.medium-module-text h6, .white.small-module-text h6 {
+    color: #42393c;
+    background: white;
+}
+.module-text.white h3, .white.xlarge-module-text h3, .white.large-module-text h3, .white.medium-module-text h3, .white.small-module-text h3 {
+    font-weight: 400;
+}
+.module-text h1, .xlarge-module-text h1, .large-module-text h1, .medium-module-text h1, .small-module-text h1, .module-text h2, .xlarge-module-text h2, .large-module-text h2, .medium-module-text h2, .small-module-text h2, .module-text .headline a, .headline .module-text a, .xlarge-module-text .headline a, .headline .xlarge-module-text a, .large-module-text .headline a, .headline .large-module-text a, .medium-module-text .headline a, .headline .medium-module-text a, .small-module-text .headline a, .headline .small-module-text a, .module-text .footer a, .footer .module-text a, .xlarge-module-text .footer a, .footer .xlarge-module-text a, .large-module-text .footer a, .footer .large-module-text a, .medium-module-text .footer a, .footer .medium-module-text a, .small-module-text .footer a, .footer .small-module-text a, .module-text h3, .xlarge-module-text h3, .large-module-text h3, .medium-module-text h3, .small-module-text h3, .module-text h4, .xlarge-module-text h4, .large-module-text h4, .medium-module-text h4, .small-module-text h4, .module-text h5, .xlarge-module-text h5, .large-module-text h5, .medium-module-text h5, .small-module-text h5, .module-text h6, .xlarge-module-text h6, .large-module-text h6, .medium-module-text h6, .small-module-text h6 {
+    float: right;
+}
+#about-me .large-module-text, .intro-module .module-text, .intro-module .xlarge-module-text, .intro-module .large-module-text, .intro-module .medium-module-text, .intro-module .small-module-text, #bio .module-text, #bio .xlarge-module-text, #bio .large-module-text, #bio .medium-module-text, #bio .small-module-text {
+    display: block;
+}
+.xlarge-module-text, .large-module-text, .medium-module-text, .small-module-text {
+    display: none;
+}
+.xlarge-module-text {
+    width: 400px;
+}
+.large-module-text {
+    width: 280px;
+}
+.medium-module-text {
+    width: 230px;
+}
+.small-module-text {
+    width: 200px;
+}
+.text-only-module .solo-text, .small-text-only-module .solo-text, .large-text-only-module .solo-text, .xlarge-text-only-module .solo-text, .page-header .solo-text {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    left: 25px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.text-only-module.white .solo-text h5, .white.small-text-only-module .solo-text h5, .white.large-text-only-module .solo-text h5, .white.xlarge-text-only-module .solo-text h5, .white.page-header .solo-text h5 {
+    color: #ee478d;
+    font-weight: 400;
+}
+.page-header {
+    background: #42393c;
+    height: 300px;
+}
+/* Text Module */
+ .text-module {
+    padding: 25px 15%;
+    height: auto;
+}
+.text-module.white a, .text-module.white p {
+    color: #42393c;
+}
+.text-module.white h3 {
+    color: #42393c;
+    font-weight: 400;
+    font-size: 25px;
+}
+.text-module.white li {
+    color: #42393c;
+}
+.text-module.white hr {
+    border: 1px solid #42393c;
+}
+.text-module a {
+    display: inline;
+    font-weight: 400;
+}
+.text-module p {
+    text-align: justify;
+    margin-bottom: 20px;
+    text-indent: 20px;
+}
+.text-module p.first-paragraph {
+    text-indent: 0;
+}
+.text-module p:last-child {
+    margin-bottom: 0;
+}
+.text-module li {
+    font-weight: 400;
+    font-size: 20px;
+    color: #42393c;
+    margin-left: 30px;
+    line-height: 35px;
+}
+.text-module li ~ p, .text-module li ~ h2, .text-module .headline li ~ a, .headline .text-module li ~ a, .text-module .footer li ~ a, .footer .text-module li ~ a {
+    margin-top: 20px;
+}
+.footer-buttons .xsmall-module {
+    height: auto;
+    padding: 0;
+}
+.footer-buttons li:last-child {
+    border: none;
+}
+.footer-buttons li:hover {
+    background: #ee478d;
+}
+.footer-buttons li:hover a {
+    color: white;
+}
+.footer-buttons li a {
+    padding: 25px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font: 500 18px/20px"Alegreya Sans", "Helvetica", "Arial", sans-serif;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    color: #ee478d;
+}
+/* Special Styles */
+ #bio, #about-me {
+    background: url("../images/portrait.jpg");
+    background-size: cover;
+    padding-top: 80px;
+}
+#about-me:hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../images/portrait.jpg");
+    background-size: cover;
+}
+#decal {
+    background: url("../images/home/decal.png");
+    background-size: cover;
+    background-position: center;
+}
+#decal:hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../images/home/decal.png");
+    background-size: cover;
+    background-position: center;
+}
+#penpal {
+    background: url("../images/home/penpal.jpg") no-repeat;
+    background-size: cover;
+}
+#penpal:hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../images/home/penpal.jpg") no-repeat;
+    background-size: cover;
+}
+#posters {
+    background: url("../images/home/posters.jpg");
+    background-size: cover;
+    background-position: center;
+}
+#posters:hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../images/home/posters.jpg");
+    background-size: cover;
+    background-position: center;
+}
+#design-minor {
+    background: url("../images/home/designminor.png");
+    background-position: center;
+    background-size: cover;
+}
+#design-minor:hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../images/home/designminor.png");
+    background-position: center;
+    background-size: cover;
+}
+#jamnbread {
+    background: url(http://fat.gfycat.com/NauticalTornDragon.gif);
+    background-position: center;
+}
+#jamnbread:hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(http://fat.gfycat.com/NauticalTornDragon.gif);
+    background-position: center;
+}
+#spotify {
+    background: url("../images/home/spotify.jpg") no-repeat white;
+    background-position: center;
+}
+#spotify:hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../images/home/spotify.jpg") no-repeat white;
+    background-position: center;
+}
+#davinci {
+    background: url("../images/home/davinci.png") no-repeat;
+    background-size: cover;
+}
+#davinci:hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../images/home/davinci.png") no-repeat;
+    background-size: cover;
+}
+#photoshop {
+    background: url("../images/home/photoshop.png") center no-repeat;
+    background-size: cover;
+}
+#photoshop:hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../images/home/photoshop.png") center no-repeat;
+    background-size: cover;
+}
+#endlessmobile {
+    background: url("../images/home/endlessmobile.png") no-repeat #d16828;
+    background-size: contain;
+    background-position: center;
+}
+#endlessmobile:hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../images/home/endlessmobile.png") no-repeat #d16828;
+    background-size: contain;
+    background-position: center;
+}
+#tracks {
+    background: url("../images/home/tracks.jpg") white no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+#tracks:hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../images/home/tracks.jpg") white no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+#lostplayground {
+    background: url("http://giant.gfycat.com/KindlyHeavenlyCrane.gif") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#lostplayground:hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("http://giant.gfycat.com/KindlyHeavenlyCrane.gif") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#lostplayground.design {
+    width: 40%;
+    height: 400px;
+}
+#bare {
+    background: url("../images/home/BARE.jpg") no-repeat white;
+    background-size: cover;
+    background-position: 0 -70px;
+}
+#bare:hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../images/home/BARE.jpg") no-repeat white;
+    background-size: cover;
+    background-position: 0 -70px;
+}
+#motivateme {
+    background: url("http://zippy.gfycat.com/SecondaryPotableGoldfish.gif");
+    background-position: 0px -75px;
+}
+#motivateme:hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("http://zippy.gfycat.com/SecondaryPotableGoldfish.gif");
+    background-position: 0px -75px;
+}
+#fungi {
+    background: url("../images/home/fungi.jpg") center;
+    background-size: cover;
+}
+#fungi:hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../images/home/fungi.jpg") center;
+    background-size: cover;
+}
+#leviosa-intro, #leviosa {
+    background: url("../images/home/leviosa.png") center white no-repeat;
+    background-size: 50%;
+}
+#dataanalytics {
+    background: url("../images/home/data-analytics.jpg") center no-repeat;
+}
+#dataanalytics:hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../images/home/data-analytics.jpg") center no-repeat;
+}
+#leviosa:hover {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("../images/home/leviosa.png") center white no-repeat;
+    background-size: 50%;
+}
+#dataanalytics-intro {
+    background: url("../images/dataanalytics/cover.jpg") center;
+    background-size: cover;
+}
+#posters-intro {
+    background: url("../images/posters/horizontal-cocktails.jpg") center;
+    background-position: contain;
+}
+#penpal-intro {
+    background: url("../images/penpal/userflow.jpg") center;
+}
+#decal-intro {
+    background: url("../images/decal/header.png") center white;
+}
+#fungi-intro {
+    background: url("../images/fungi/cover.jpg") center no-repeat;
+    background-size: cover;
+}
+#motivateme-intro {
+    background: url("../images/motivateme/header.gif") center;
+    background-position: 0 -150px;
+}
+#spotify-intro {
+    background: white url("../images/spotify/intro.jpg") no-repeat 0 100px;
+    background-position: center;
+}
+#jamnbread-intro {
+    background: url(http://fat.gfycat.com/NauticalTornDragon.gif) no-repeat;
+    background-size: cover;
+}
+#lostplayground-intro {
+    background: url("../images/lostplayground/intro.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#bare-intro {
+    background: url("../images/bare/bare.jpg");
+    background-size: cover;
+}
+#designminor-intro {
+    background: url("../images/designminor/intro.png");
+    background-size: cover;
+}
+#endlessmobile-intro {
+    background: url("../images/endlessmobile/cover.jpg") center;
+    background-size: cover;
+}
+#davinci-intro {
+    background: url("../images/davinci/cover.jpg") center;
+    background-size: cover;
+}
+#tracks-intro {
+    background: url("../images/tracks/cover.png") center;
+    background-size: cover;
+}
+#photoshop-intro {
+    background: url("../images/photoshop/cover.png") center;
+}
+#about-me-bio, #skills {
+    padding: 25px;
+}
+/* Screen Compatibility */
+ @media screen and (max-width: 1200px) {
+    #wrapper {
+        width: 90%;
+    }
+    h2, .headline a, .footer a {
+        font-size: 25px;
+    }
+    h5 {
+        font-size: 35px;
+    }
+    .small-module-text {
+        width: 188px;
+    }
+    .xsmall-module, .xsmall-group {
+        width: 40%;
+    }
+    .xsmall-module.design, .xsmall-group.design {
+        width: 20%;
+    }
+    #posters {
+        background-size: cover;
+    }
+    #posters:hover {
+        background-size: cover;
+    }
+    #tracks {
+        width: 20%;
+    }
+    #lostplayground {
+        width: 100%;
+        background: url("http://giant.gfycat.com/KindlyHeavenlyCrane.gif") no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    #lostplayground:hover {
+        background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url("http://giant.gfycat.com/KindlyHeavenlyCrane.gif") no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    #spotify {
+        width: 60%;
+    }
+    .footer-buttons .xsmall-module {
+        width: 20%;
+    }
+    #skills {
+        width: 30%;
+        padding: 25px;
+    }
+    .large-text-only-module {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 900px) {
+    #skills {
+        width: 100%;
+        height: auto;
+    }
+    .large-text-only-module {
+        width: 100%;
+        height: auto;
+    }
+}
+@media screen and (max-width: 750px) {
+    .text-module p {
+        text-align: left;
+    }
+    #wrapper {
+        width: 100%;
+    }
+    #tracks {
+        width: 100%;
+    }
+    .module.xsmall-module, .xsmall-module, .module.small-module, .small-module, .small-text-only-module, .module.medium-module, .medium-module, .module.large-module, .large-module, .large-text-only-module, .module.xlarge-module, .module.headline, .headline.xsmall-module, .headline.xsmall-module-tall, .headline.small-module, .headline.small-text-only-module, .headline.small-module-tall, .headline.medium-module, .headline.medium-module-tall, .headline.large-module, .headline.large-text-only-module, .headline.large-module-tall, .headline.xlarge-module, .headline.xlarge-module-tall, .module.footer, .footer.xsmall-module, .footer.xsmall-module-tall, .footer.small-module, .footer.small-text-only-module, .footer.small-module-tall, .footer.medium-module, .footer.medium-module-tall, .footer.large-module, .footer.large-text-only-module, .footer.large-module-tall, .footer.xlarge-module, .footer.xlarge-module-tall, .xlarge-module.xsmall-module, .xsmall-module.intro-module, .xsmall-module.video-module, .xsmall-module.xlarge-text-only-module, .xsmall-module.page-header, .xsmall-module.text-module, .xlarge-module.xsmall-module-tall, .xsmall-module-tall.intro-module, .xsmall-module-tall.video-module, .xsmall-module-tall.xlarge-text-only-module, .xsmall-module-tall.page-header, .xsmall-module-tall.text-module, .xlarge-module.small-module, .small-module.intro-module, .intro-module.small-text-only-module, .small-module.video-module, .video-module.small-text-only-module, .xlarge-module.small-text-only-module, .small-text-only-module.xlarge-text-only-module, .small-text-only-module.page-header, .small-text-only-module.text-module, .small-module.xlarge-text-only-module, .small-module.page-header, .small-module.text-module, .xlarge-module.small-module-tall, .small-module-tall.intro-module, .small-module-tall.video-module, .small-module-tall.xlarge-text-only-module, .small-module-tall.page-header, .small-module-tall.text-module, .xlarge-module.medium-module, .medium-module.intro-module, .medium-module.video-module, .medium-module.xlarge-text-only-module, .medium-module.page-header, .medium-module.text-module, .xlarge-module.medium-module-tall, .medium-module-tall.intro-module, .medium-module-tall.video-module, .medium-module-tall.xlarge-text-only-module, .medium-module-tall.page-header, .medium-module-tall.text-module, .xlarge-module.large-module, .large-module.intro-module, .intro-module.large-text-only-module, .large-module.video-module, .video-module.large-text-only-module, .xlarge-module.large-text-only-module, .large-text-only-module.xlarge-text-only-module, .large-text-only-module.page-header, .large-text-only-module.text-module, .large-module.xlarge-text-only-module, .large-module.page-header, .large-module.text-module, .xlarge-module.large-module-tall, .large-module-tall.intro-module, .large-module-tall.video-module, .large-module-tall.xlarge-text-only-module, .large-module-tall.page-header, .large-module-tall.text-module, .xlarge-module, .headline, .footer, .intro-module, .video-module, .xlarge-text-only-module, .page-header, .text-module, .xlarge-module.xlarge-module-tall, .xlarge-module-tall.intro-module, .xlarge-module-tall.video-module, .xlarge-module-tall.xlarge-text-only-module, .xlarge-module-tall.page-header, .xlarge-module-tall.text-module, .module.intro-module, .intro-module.xlarge-module, .module.video-module, .video-module.xlarge-module, .module.xlarge-text-only-module, .xlarge-text-only-module.xlarge-module, .xlarge-module.page-header, .module.page-header, .module.text-module, .text-module.xlarge-module, .module#spotify, #spotify.xsmall-module, #spotify.xsmall-module-tall, #spotify.small-module, #spotify.small-text-only-module, #spotify.small-module-tall, #spotify.medium-module, #spotify.medium-module-tall, #spotify.large-module, #spotify.large-text-only-module, #spotify.large-module-tall, #spotify.xlarge-module, #spotify.headline, #spotify.footer, #spotify.intro-module, #spotify.video-module, #spotify.xlarge-text-only-module, #spotify.page-header, #spotify.text-module, #spotify.xlarge-module-tall {
+        width: 100%;
+        background-size: cover;
+    }
+    .small-group {
+        width: 100%;
+    }
+    .medium-group {
+        width: 100%;
+    }
+    .small-module-tall, .small-group-tall, .medium-module-tall, .medium-group-tall {
+        width: 100%;
+    }
+    .small-text-only-module {
+        height: auto;
+        padding: 25px;
+        border-bottom: 1px solid white;
+    }
+    .small-text-only-module .solo-text {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+    .general-navigation {
+        width: 100%;
+    }
+    .general-navigation #logo {
+        width: 40px;
+    }
+    .general-navigation li {
+        height: 40px;
+    }
+    .general-navigation .general-navigation-item {
+        height: 40px;
+        padding: 10px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .general-navigation .general-navigation-item.first {
+        margin-left: 40px;
+    }
+    .general-navigation .general-navigation-item a {
+        padding: 0 10px;
+        margin: 0;
+    }
+    .footer-buttons .xsmall-module {
+        width: 100%;
+    }
+}

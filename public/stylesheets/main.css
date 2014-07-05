@@ -1,0 +1,340 @@
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+
+#cssmenu {
+
+    background: #76e5db;
+
+    width: auto;
+
+}
+
+#cssmenu ul {
+
+    list-style: none;
+
+    margin: 0;
+
+    padding: 0;
+
+    line-height: 1;
+
+    display: block;
+
+    zoom: 1;
+
+}
+
+#cssmenu ul:after {
+
+    content:' ';
+
+    display: block;
+
+    font-size: 0;
+
+    height: 0;
+
+    clear: both;
+
+    visibility: hidden;
+
+}
+
+#cssmenu ul li {
+
+    float: left;
+
+    display: block;
+
+    padding: 0;
+
+}
+
+#cssmenu ul li a {
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    display: block;
+
+    padding: 15px 25px;
+
+    font-family:'Open Sans', sans-serif;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    font-size: 14px;
+
+    position: relative;
+
+    -webkit-transition: color .25s;
+
+    -moz-transition: color .25s;
+
+    -ms-transition: color .25s;
+
+    -o-transition: color .25s;
+
+    transition: color .25s;
+
+}
+
+#cssmenu ul li a:hover {
+
+    color: #333333;
+
+}
+
+#cssmenu ul li a:hover:before {
+
+    width: 100%;
+
+}
+
+#cssmenu ul li a:after {
+
+    content:'';
+
+    display: block;
+
+    position: absolute;
+
+    right: -3px;
+
+    top: 19px;
+
+    height: 6px;
+
+    width: 6px;
+
+    background: #ffffff;
+
+    opacity: .5;
+
+}
+
+#cssmenu ul li a:before {
+
+    content:'';
+
+    display: block;
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    height: 3px;
+
+    width: 0;
+
+    background: #333333;
+
+    -webkit-transition: width .25s;
+
+    -moz-transition: width .25s;
+
+    -ms-transition: width .25s;
+
+    -o-transition: width .25s;
+
+    transition: width .25s;
+
+}
+
+#cssmenu ul li.last > a:after, #cssmenu ul li:last-child > a:after {
+
+    display: none;
+
+}
+
+#cssmenu ul li.active a {
+
+    color: #333333;
+
+}
+
+#cssmenu ul li.active a:before {
+
+    width: 100%;
+
+}
+
+@media screen and (max-width: 768px) {
+
+    #cssmenu ul li {
+
+        float: none;
+
+    }
+
+    #cssmenu ul li a {
+
+        width: 100%;
+
+        -moz-box-sizing: border-box;
+
+        -webkit-box-sizing: border-box;
+
+        box-sizing: border-box;
+
+    }
+
+    #cssmenu ul li a:after {
+
+        display: none;
+
+    }
+
+    #cssmenu ul li a:before {
+
+        height: 1px;
+
+        background: #ffffff;
+
+        width: 100%;
+
+        opacity: .2;
+
+    }
+
+    #cssmenu ul li.last > a:before, #cssmenu ul li:last-child > a:before {
+
+        display: none;
+
+    }
+
+}
+
+.profile-pic {
+
+    width: 300px;
+
+    height: 500px;
+
+    margin-right: 20px;
+
+}
+
+@media screen and (min-width: 768px) .bs-header {
+
+    font-size: 21px;
+
+    text-align: left;
+
+}
+
+.bs-header {
+
+    padding: 30px 30px 40px;
+
+    font-size: 30px;
+
+    color: #5a5a5a;
+
+    text-align: center;
+
+    border-bottom: 1px solid #e5e5e5;
+
+}
+
+.container {
+
+    padding-right: 15px;
+
+    padding-left: 15px;
+
+    margin-right: auto;
+
+    margin-left: auto;
+
+}
+
+.bs-header h1, .bs-header h4 {
+
+    color: #4A5783;
+
+}
+
+@media screen and (min-width: 768px) .bs-header h1 {
+
+    font-size: 60px;
+
+    line-height: 1;
+
+}
+
+.bs-header a {
+
+    font-weight: 300;
+
+    line-height: 1.5;
+
+    text-decoration: underline
+
+}
+
+.sub {
+
+    padding-top: 90px;
+
+}
+
+.bs-footer {
+
+    padding-top: 40px;
+
+    padding-bottom: 30px;
+
+    margin-top: 100px;
+
+    text-align: center;
+
+    border-top: 1px solid #e5e5e5;
+
+}
+
+ul#horizontal-list {
+
+    min-width: 696px;
+
+    list-style: none;
+
+    padding-top: 20px;
+
+}
+
+ul#horizontal-list li {
+
+    display: inline;
+
+    font-size: 25px;
+
+}
+
+.copyright {
+
+    font-size: 25px;
+
+}
+
+.introduction {
+
+    font-size: 20px;
+
+}
+
+.center {
+
+    margin-right: auto;
+
+    margin-left: auto;
+
+    text-align: center;
+
+}
