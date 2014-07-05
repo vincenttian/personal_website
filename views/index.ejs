@@ -1,7 +1,18 @@
 <html>
 <% include partials/header %>
 <body background="images/paper_fibers.png">
-	 <% include partials/navbar %>
+	<div id='cssmenu'>
+		<ul>
+			<li class='active'><a href='/'><span>About</span></a></li>
+			<li><a href='/resume'><span>Resume</span></a></li>
+			<li><a href='/blog'><span>Blog</span></a></li>
+			<li><a href='/interests'><span>Interests</span></a></li>
+			<li><a href='/projects'><span>Projects</span></a></li>
+			<li><a href='/blueprint'><span>Blueprint</span></a></li>
+			<li><a href='/webdev'><span>Web Development</span></a></li>
+			<li class='last'><a href='/contact'><span>Contact</span></a></li>
+		</ul>
+	</div>
 	<div class="bs-header" id="content"> 
 		<div class="container">
 			<div class="row">
@@ -18,17 +29,17 @@
 		</div>
 	</div>
 	<div class="introduction center"> 
-		External VP of <a href='#'><span>Cal Blueprint.</span></a>
-		Software Engineering Intern at <a href='#'><span>Intuit.</span></a>
+		External VP of <a href='http://calblueprint.org/'><span>Cal Blueprint.</span></a>
+		Software Engineering Intern at <a href='http://intuit.com/'><span>Intuit.</span></a>
 		<br> 
-		<a href='#'><span>Hacker.</span></a>
-		Software Engineering Intern at <a href='#'><span>Salesforce.</span></a>
+		<a href='/projects'><span>Hacker.</span></a>
+		Software Engineering Intern at <a href='http://salesforce.com'><span>Salesforce.</span></a>
 		<br>
-		<a href='#'><span>Ruby on Rails TA.</span></a>
-		Operations Officer at <a href='#'><span>Berkeley Investing Group.</span></a>
+		<a href='http://railsdecal.com/'><span>Ruby on Rails TA.</span></a>
+		Operations Officer at <a href='http://ocf.berkeley.edu/~cia/'><span>Berkeley Investing Group.</span></a>
 		<br>
 		Fundamental Investor.
-		<a href='#'><span>Competitive Chess Player.</span></a>
+		<a href='http://chess.com/members/view/vincentt888'><span>Competitive Chess Player.</span></a>
 		Amateur Photographer.
 	</div>
 	<% include partials/footer %>

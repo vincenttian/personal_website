@@ -25,6 +25,10 @@ module.exports = function(app) {
         res.render('blueprint.ejs');
     });
 
+    app.get('/webdev', function(req, res) {
+        res.render('webdev.ejs');
+    });
+
     app.get('/contact', function(req, res) {
         res.render('contact.ejs');
     });
