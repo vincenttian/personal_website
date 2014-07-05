@@ -3,7 +3,7 @@
 
 #cssmenu {
 
-    background: #76e5db;
+    background: #a1b5c4;
 
     width: auto;
 
@@ -233,7 +233,7 @@
 
     padding: 30px 30px 40px;
 
-    font-size: 30px;
+    font-size: 25px;
 
     color: #5a5a5a;
 
@@ -313,19 +313,21 @@ ul#horizontal-list li {
 
     display: inline;
 
-    font-size: 25px;
+    font-size: 20px;
 
 }
 
 .copyright {
 
-    font-size: 25px;
+    font-size: 20px;
 
 }
 
 .introduction {
 
     font-size: 20px;
+
+    padding-top: 15px;
 
 }
 
