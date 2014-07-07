@@ -29,6 +29,10 @@ module.exports = function(app) {
         res.render('webdev.ejs');
     });
 
+    app.get('/games', function(req, res) {
+        res.render('games.ejs');
+    });
+
     app.get('/contact', function(req, res) {
         res.render('contact.ejs');
     });
