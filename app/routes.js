@@ -1,3 +1,6 @@
+var fs = require('fs');
+var http = require('http');
+
 module.exports = function(app) {
 
     // show the home page (will also have our login links)
@@ -7,6 +10,20 @@ module.exports = function(app) {
 
     app.get('/resume', function(req, res) {
         res.render('resume.ejs');
+    });
+
+    app.get('/resume_pdf', function(req, res) {
+        fs.readFile('./views/resume.pdf', function(error, content) {
+            if (error) {
+                res.writeHead(500);
+                res.end();
+            } else {
+                res.writeHead(200, {
+                    'Content-Type': 'application/pdf'
+                });
+                res.end(content, 'utf-8');
+            }
+        });
     });
 
     app.get('/blog', function(req, res) {
