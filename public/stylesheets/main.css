@@ -340,3 +340,9 @@ ul#horizontal-list li {
     text-align: center;
 
 }
+
+#social li {
+
+    list-style-type: none;
+
+}
