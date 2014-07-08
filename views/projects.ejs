@@ -1,6 +1,7 @@
 <html>
 <% include partials/header %>
-<body background="images/paper_fibers.png">
+<!-- <body background="images/stardust.png"> -->
+<body>
 	<div id='cssmenu'>
 		<ul>
 			<li><a href='/'><span>About</span></a></li>
@@ -12,42 +13,60 @@
 		</ul>
 	</div>
 	<div class="bs-header" id="content"> 
+		Here are a list of my projects!
 	</div>
-	<div class="introduction center"> 
+	<div class="introduction"> 
 		<div class="row">
-			<div class="col-md-2">
-				Project Navbar
+			<div class="col-md-2 center">
+				<div id="box2">
+					Project Navbar
+					<a href="#cliquechat">CliqueChat</a>
+					<br>
+					<a href="#mintfamily">Mint Family</a>
+					<br>
+					<a href="#pongs">Pongs</a>
+					<br>
+					<a href="#beavc">Be a VC Case Competition</a>
+					<br>
+					<a href="#ros">Roots of Success</a>
+					<br>
+					<a href="#liveplan">Liveplan</a>
+					<br>
+					<a href="#trace">tRace</a>
+					<br>
+					<a href="#suitcase">Suitcase Clinic</a>
+				</div>
 			</div>
-			<div class="col-md-9">
-				<h1>CliqueChat</h1>
+			<div class="col-md-9 projects">
+				<a name="cliquechat"><h1>CliqueChat</h1></a>
 				<p>Blah Blah</p>
 				<br>
 
-				<h1>Mint Family</h1>
+				<a name="mintfamily"> <h1>Mint Family</h1> </a>
 				<p>Blah Blah</p>
 				<br>
 
-				<h1>Pongs</h1>
+				<a name="pongs"> <h1>Pongs</h1> </a>
 				<p>Blah Blah</p>
 				<br>
 				
-				<h1>Be a VC Case Competition</h1>
+				<a name="beavc"> <h1>Be a VC Case Competition</h1> </a>
 				<p>Blah Blah</p>
 				<br>
 
-				<h1>Roots of Success</h1>
+				<a name="ros"> <h1>Roots of Success</h1> </a>
 				<p>Blah Blah</p>
 				<br>
 
-				<h1>Liveplan</h1>
+				<a name="liveplan"> <h1>Liveplan</h1> </a>
 				<p>Blah Blah</p>
 				<br>
 
-				<h1>tRace</h1>
+				<a name="trace"> <h1>tRace</h1> </a>
 				<p>Blah Blah</p>
 				<br>
 
-				<h1>Suitcase Clinic</h1>
+				<a name="suitcase"> <h1>Suitcase Clinic</h1> </a>
 				<p>Blah Blah</p>
 				<br>
 			</div>
@@ -55,3 +74,29 @@
 	</div>
 	<% include partials/footer %>
 </body>
+<script> 
+window.onload = function() {
+  function getScrollTop() {
+    if (typeof window.pageYOffset !== 'undefined' ) {
+      return window.pageYOffset;
+    }
+    var d = document.documentElement;
+    if (d.clientHeight) {
+      return d.scrollTop;
+    }
+    return document.body.scrollTop;
+  }
+  window.onscroll = function() {
+    var box2 = document.getElementById('box2'),
+        scroll = getScrollTop();
+
+    if (scroll <= 28) {
+      box2.style.top = "10px";
+    }
+    else {
+      box2.style.top = (scroll + 2) + "px";
+    }
+  };
+
+};
+</script>

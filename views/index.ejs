@@ -1,6 +1,7 @@
 <html>
 <% include partials/header %>
-<body background="images/paper_fibers.png">
+<!-- <body background="images/stardust.png"> -->
+<body>
 	<div id='cssmenu'>
 		<ul>
 			<li class='active'><a href='/'><span>About</span></a></li>
@@ -11,14 +12,16 @@
 			<li class='last'><a href='/contact'><span>Contact</span></a></li>
 		</ul>
 	</div>
-	<div class="bs-header" id="content"> 
+	<div class="bs-header welcome" id="content"> 
 		<div class="container">
 			<div class="row">
-				<div class="col-md-5">
-					<img class="profile-pic" src="images/me.png">
+				<div class="col-md-5 picture">
+					<div id="pic_background">
+						<img class="profile-pic" src="images/me.png">
+					</div>
 				</div>
 				<div class="col-md-7 sub">
-					<h1 style="font-size: 90px;">Vincent Tian</h1>
+					<h1 id="name">Vincent Tian</h1>
 					<p>
 						I'm a third year Cal undergrad studying Computer Science with interests in finance, non-profits, and tech.
 					</p>
@@ -27,6 +30,7 @@
 		</div>
 	</div>
 	<div class="introduction center"> 
+		<h1>About Me</h1>
 		External VP of <a href='http://calblueprint.org/' target="blueprint"><span>Cal Blueprint.</span></a>
 		Software Engineering Intern at <a href='http://intuit.com/' target="intuit"><span>Intuit.</span></a>
 		<br> 
