@@ -346,3 +346,77 @@ ul#horizontal-list li {
     list-style-type: none;
 
 }
+
+#box {
+
+    /* Position absolutely, 30px down from the top */
+
+    position: absolute;
+
+    top: 100px;
+
+    padding-left: 70px;
+
+}
+
+.resume {
+
+    padding-left: 70px;
+
+}
+
+.flat-button {
+
+    display: inline-block;
+
+    padding: 15px 60px;
+
+    border: 0;
+
+    text-shadow: none;
+
+    -moz-background-clip: padding;
+
+    -webkit-background-clip: padding-box;
+
+    background-clip: padding-box;
+
+    color: #FFF;
+
+    background-color: #3a4263;
+
+    text-transform: uppercase;
+
+    margin-top: 15px;
+
+    margin-bottom: 15px;
+
+    top: 0;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    text-align: center;
+
+}
+
+.animated {
+
+    -webkit-animation-duration: 1s;
+
+    animation-duration: 1s;
+
+    -webkit-animation-fill-mode: both;
+
+    animation-fill-mode: both;
+
+}
+
+.tada {
+
+    -webkit-animation-name: tada;
+
+    animation-name: tada;
+
+}

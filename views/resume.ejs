@@ -14,32 +14,34 @@
 	<div class="bs-header" id="content"> 
 		Below is an interactive version of my resume. You can download a pdf version <a href="resume_pdf">here.</a>
 	</div>
-	<div class="introduction center"> 
+	<div class="introduction"> 
 		<div class="row">
-			<div class="col-md-2">
-				Skills
-				<br><br>
-				<div>
-					Web Development:
+			<div class="col-md-2 col-sm-1">
+				<div id="box">
+					Skills
+					<br><br>
+					<div>
+						Web Development:
+						<br>
+						Django, Ruby on Rails, Node.js, jQuery, HTML, CSS, Salesforce1 platform (Apex, Visualforce)
+					</div>
 					<br>
-					Django, Ruby on Rails, Node.js, jQuery, HTML, CSS, Salesforce1 platform (Apex, Visualforce)
-				</div>
-				<br>
-				<div>
-					Programming:
-					Python, Java, Javascript
-				</div>
-				<br>
-				<div>
-					Experience with:
-					C, Angular.js, Android SDK
-				</div>
-				<div> 
-					Other software: Microsoft Office (Powerpoint, Excel, Word)
+					<div>
+						Programming:
+						Python, Java, Javascript
+					</div>
+					<br>
+					<div>
+						Experience with:
+						C, Angular.js, Android SDK
+					</div>
+					<div> 
+						Other software: Microsoft Office (Powerpoint, Excel, Word)
+					</div>
 				</div>
 			</div>
 			<div class="col-md-9">
-				<div>
+				<div class="resume">
 					<div>
 						<h1>Education</h1>
 						<h3>University of California, Berkeley</h3>
@@ -111,3 +113,29 @@
 	</div>
 	<% include partials/footer %>
 </body>
+<script>
+window.onload = function() {
+  function getScrollTop() {
+    if (typeof window.pageYOffset !== 'undefined' ) {
+      return window.pageYOffset;
+    }
+    var d = document.documentElement;
+    if (d.clientHeight) {
+      return d.scrollTop;
+    }
+    return document.body.scrollTop;
+  }
+  window.onscroll = function() {
+    var box = document.getElementById('box'),
+        scroll = getScrollTop();
+
+    if (scroll <= 28) {
+      box.style.top = "100px";
+    }
+    else {
+      box.style.top = (scroll + 2) + "px";
+    }
+  };
+
+};
+</script>
