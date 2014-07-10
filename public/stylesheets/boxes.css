@@ -1,0 +1,182 @@
+/* =====================================
+FONT-FACE DECLARATIONS
+======================================== */
+ @font-face {
+    font-family:'Atlas Grotesk Web';
+    src: url("/_css/AtlasGrotesk-Light-Web.eot");
+    src: url("/_css/AtlasGrotesk-Light-Web.eot?#iefix") format("embedded-opentype"), url("/_css/AtlasGrotesk-Light-Web.woff") format("woff"), url("/_css/AtlasGrotesk-Light-Web.ttf") format("truetype"), url("/_css/AtlasGrotesk-Light-Web.svg#Atlas Grotesk Web") format("svg");
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family:'Atlas Grotesk Web';
+    src: url("/_css/AtlasGrotesk-Medium-Web.eot");
+    src: url("/_css/AtlasGrotesk-Medium-Web.eot?#iefix") format("embedded-opentype"), url("/_css/AtlasGrotesk-Medium-Web.woff") format("woff"), url("/_css/AtlasGrotesk-Medium-Web.ttf") format("truetype"), url("/_css/AtlasGrotesk-Medium-Web.svg#Atlas Grotesk Web") format("svg");
+    font-weight: 500;
+    font-style: normal;
+}
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+@media only screen and (min-width: 600px) {
+    /*body {
+    padding: 0 1.55555em;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+*/
+}
+a {
+    color: #444444;
+    text-decoration: none;
+    border-bottom: 1px solid #aaaaaa;
+    -webkit-transition: color 0.2s ease-out;
+    -moz-transition: color 0.2s ease-out;
+    -o-transition: color 0.2s ease-out;
+    -ms-transition: color 0.2s ease-out;
+    transition: color 0.2s ease-out;
+}
+a:hover {
+    color: #aaaaaa;
+    border-bottom: 1px solid #444444;
+}
+small a, footer a {
+    color: #aaaaaa;
+    border-bottom: 1px solid #dddddd;
+}
+small a:hover, footer a:hover {
+    color: #444444;
+}
+img.fullimg {
+    display: block;
+    width: 100%;
+}
+div.fluid-width-video-wrapper {
+    margin-left: 0 !important;
+}
+p {
+    margin: 1.555556em 0;
+}
+figure {
+    margin: 2.55556em 0 0;
+}
+figure img {
+    display: block;
+    width: 100%;
+}
+a.projthumb figure {
+    margin: 0;
+    padding-top: 10px;
+}
+figcaption {
+    color: #aaaaaa;
+    margin: 1.55556em 0 3em 0;
+    padding-left: 2em;
+    padding-right: 1em;
+    text-indent: -1em;
+}
+@media only screen and (min-width: 600px) {
+    figcaption {
+        padding-left: 50%;
+        padding-right: 0;
+    }
+}
+/* =====================================
+PROJECT THUMBNAIL LISTINGS
+======================================== */
+ section.projlinks a {
+    border: none;
+}
+section.projlinks a img {
+    display: block;
+    width: 100%;
+    margin: 0;
+    margin-top: -2.66em;
+    padding: 0;
+    z-index: 1;
+    -webkit-transition: opacity 0.5s ease-out;
+    -moz-transition: opacity 0.2s ease-out;
+    -o-transition: opacity 0.2s ease-out;
+    -ms-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
+}
+section.projlinks a strong {
+    display: block;
+    font-weight: 500;
+    z-index: 100;
+    opacity: 0;
+    padding: 1em 0 0 2em;
+    position: relative;
+    top: 1.5em;
+    -webkit-transition: opacity 0.5s ease-out;
+    -moz-transition: opacity 0.2s ease-out;
+    -o-transition: opacity 0.2s ease-out;
+    -ms-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out, top 0.5s ease-out;
+}
+section.projlinks a:hover img {
+    opacity: 0.33;
+    -webkit-filter: grayscale(1);
+}
+section.projlinks a:hover strong {
+    opacity: 1;
+    color: #444444;
+    top: 1em;
+}
+@media only screen and (min-width: 600px) {
+    section.projlinks {
+        border-top: 1px solid #dddddd;
+        border-bottom: 1px solid #dddddd;
+        padding-bottom: 1.5555555em;
+        padding-top: 0;
+    }
+    section.projlinks:after {
+        content:'';
+        clear: both;
+        display: block;
+    }
+    section.projlinks a {
+        width: 50%;
+        float: left;
+        margin-top: 1.55556em;
+    }
+    section.projlinks a:nth-child(odd) {
+        padding-right: 0.77777778em;
+    }
+    section.projlinks a:nth-child(even) {
+        padding-left: 0.77777778em;
+    }
+    section.projlinks a:nth-last-child(2) {
+        margin-bottom: 0;
+    }
+    section.projlinks a:last-child {
+        margin-bottom: 0;
+    }
+}
+section.onproj {
+    padding: 1.55556em 0;
+    border-bottom: 1px solid #dddddd;
+}
+section.onproj a {
+    width: 50%;
+    display: block;
+    border: none;
+}
+section.onproj a strong {
+    border-bottom: 1px solid #dddddd;
+}
+section.onproj a.prev {
+    float: left;
+}
+section.onproj a.next {
+    float: right;
+    text-align: right;
+}
+section.onproj:after {
+    content:'';
+    clear: both;
+    display: block;
+}
